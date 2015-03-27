@@ -7,7 +7,7 @@ namespace LemonStorage.Interfaces
         decimal Price { get; set; }
         string Brand { get; set; }
         string Model { get; set; }
-        ConsoleColor Color { get; set; }
+        string Color { get; set; }
 
         void Save(); //Save in the data base 
 

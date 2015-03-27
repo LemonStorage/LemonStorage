@@ -1,18 +1,35 @@
 ﻿namespace LemonStorage.Classes
 {
+    using System;
     using LemonStorage.Interfaces;
 
     public abstract class Product: IProduct
     {
+        private decimal price;
+        private string brand;
+        private string model;
+        private string color;
+
+        public Product(decimal price, string brand, string model, string color)
+        {
+            this.Price = price;
+            this.Brand = brand;
+            this.Model = model;
+            this.Color = color;
+        }
         public decimal Price
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.price;
             }
             set
             {
-                throw new System.NotImplementedException();
+                if (value <= 0)
+                {
+                    throw new ArgumentException("The price can not be zero less or equal to zero.");                  
+                }
+                this.price = value;
             }
         }
 
@@ -20,60 +37,66 @@
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.brand;
             }
             set
             {
-                throw new System.NotImplementedException();
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("The brand can not be empty");
+                }
+                this.brand = value;
             }
         }
 
-        public uint Quantity
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
+        //public uint Quantity
+        //{
+        //    get
+        //    {
+        //        throw new System.NotImplementedException();
+        //    }
+        //    set
+        //    {
+        //        throw new System.NotImplementedException();
+        //    }
+        //}
 
 
         public string Model
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.model;
             }
             set
             {
-                throw new System.NotImplementedException();
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("The model can not be empty");
+                }
+                this.model = value;
             }
         }
 
-        public System.ConsoleColor Color
+        public string Color
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.color;
             }
             set
             {
-                throw new System.NotImplementedException();
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("The color can not be empty");
+                }
+                this.color = value;
             }
         }
 
-        public void Save()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Save();
 
-        public void Load()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Load();
 
         //public void Buy()
         //{
