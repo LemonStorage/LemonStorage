@@ -4,6 +4,6 @@
 
     public interface IPeripheralDevices
     {
-        PeripheralBrands Brand { get; set; }
+        //PeripheralBrands Brand { get; set; }
     }
 }

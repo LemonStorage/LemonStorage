@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class Scener : PeripheralDevices, IProduct, IPeripheralDevices
+    public class Scener : PeripheralDevice, IProduct, IPeripheralDevices
     {
     }
 }

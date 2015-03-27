@@ -13,11 +13,11 @@ namespace LemonStorage.Interfaces
 
         void Load(); //Load from the data base
 
-        void Buy(); //Add products
+        //void Buy(); //Add products
 
-        void Sell(); //Delete products
+        //void Sell(); //Delete products
 
-        int Quantity(); //Get the quantity from the selected product
+        //int Quantity(); //Get the quantity from the selected product
        
     }
 }

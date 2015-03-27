@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class Monitor : PeripheralDevices, IProduct, IPeripheralDevices
+    public class Monitor : PeripheralDevice, IProduct, IPeripheralDevices
     {
     }
 }

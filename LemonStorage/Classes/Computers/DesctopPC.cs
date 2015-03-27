@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class DesctopPC : Computers , IProduct, IComputer
+    public class DesctopPC : Computer , IProduct, IComputer
     {
     }
 }

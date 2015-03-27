@@ -75,19 +75,19 @@
             throw new System.NotImplementedException();
         }
 
-        public void Buy()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public void Buy()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public void Sell()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public void Sell()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        int IProduct.Quantity()
-        {
-            throw new System.NotImplementedException();
-        }
+        //int IProduct.Quantity()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
     }
 }

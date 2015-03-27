@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class Printer : PeripheralDevices, IProduct, IPeripheralDevices
+    public class Printer : PeripheralDevice, IProduct, IPeripheralDevices
     {
     }
 }

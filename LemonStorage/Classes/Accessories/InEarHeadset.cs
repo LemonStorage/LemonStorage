@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class InEarHeadset : Headphones, IProduct
+    public class InEarHeadset : Headphone, IProduct
     {
     }
 }

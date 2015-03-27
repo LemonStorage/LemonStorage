@@ -4,7 +4,7 @@
 
     public interface IAccessories
     {
-        ConsoleColor Color { get; set; }
+        ConsoleColor Color { get; set; } // ???? Coupling with the console
         string Material { get; set; }
     }
 }

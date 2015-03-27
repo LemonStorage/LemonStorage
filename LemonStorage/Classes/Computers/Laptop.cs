@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class Laptop : Computers, IProduct, IComputer
+    public class Laptop : Computer, IProduct, IComputer
     {
 
         
