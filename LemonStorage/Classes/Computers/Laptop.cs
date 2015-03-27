@@ -7,12 +7,14 @@
     {
         private int batteryDuration;
         private double weight;
-
-        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weight)
+        private int size;
+        
+        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weight, int size)
             :base(price, brand,model,color,processor,ram,hddSize,videoCardModel,soundCard)
         {
             this.BatteryDuration = batteryDuration;
             this.Weight = weight;
+            this.Size = size;
         }
 
         public int BatteryDuration
@@ -46,11 +48,27 @@
             }
         }
 
+        public int Size
+        {
+            get 
+            { 
+                return this.size; 
+            }
+            set 
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException("The size of the laptop can not be less or equal to zero");
+                }
+                this.size = value; 
+            }
+        }
+        // TODO: Implement the logic of the Laptop.Save()
         public override void Save()
         {
             throw new NotImplementedException();
         }
-
+        // TODO: Implement the logic of the Laptop.Load()
         public override void Load()
         {
             throw new NotImplementedException();

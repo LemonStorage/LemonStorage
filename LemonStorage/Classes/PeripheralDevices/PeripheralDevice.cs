@@ -5,6 +5,13 @@
 
     public abstract class PeripheralDevice : Product, IProduct, IPeripheralDevices
     {
-        
+        public PeripheralDevice(decimal price, string brand, string model, string color)
+            :base(price, brand, model, color)
+        {
+
+        }
+        public abstract void Save();
+
+        public abstract void Load();
     }
 }
