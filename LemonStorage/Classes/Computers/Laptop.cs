@@ -9,8 +9,8 @@
         private double weight;
         private int size;
         
-        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weight, int size)
-            :base(price, brand,model,color,processor,ram,hddSize,videoCardModel,soundCard)
+        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weight, int size, int cores)
+            :base(price, brand,model,color,processor,ram,hddSize,videoCardModel,soundCard, cores)
         {
             this.BatteryDuration = batteryDuration;
             this.Weight = weight;
@@ -20,7 +20,11 @@
         public int BatteryDuration
         {
             get 
-            { 
+            {
+                if (this.batteryDuration <= 0)
+                {
+                    throw new ArgumentException("The battery duration can not be less or equal to zero");
+                }
                 return this.batteryDuration; 
             }
             set 
@@ -35,7 +39,11 @@
         public double Weight
         {
             get 
-            { 
+            {
+                if (this.weight <= 0)
+                {
+                    throw new ArgumentException("The laptop weight can not be less or equal to zero");
+                }
                 return this.weight; 
             }
             set 
@@ -51,7 +59,11 @@
         public int Size
         {
             get 
-            { 
+            {
+                if (this.size <= 0)
+                {
+                    throw new ArgumentException("The size of the laptop can not be less or equal to zero");
+                }
                 return this.size; 
             }
             set 

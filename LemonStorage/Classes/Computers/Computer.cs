@@ -9,10 +9,11 @@
         private uint ram;
         private uint hddSize;
         private string videoCardModel;
-        private uint videocardMemory;
+        private uint videoCardMemory;
         private string soundCard;
+        private int cores;
 
-        public Computer(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard)
+        public Computer(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int cores)
             :base(price, brand, model, color)
         {
             this.Processor = processor;
@@ -20,11 +21,16 @@
             this.HDDSize = hddSize;
             this.VideoCardModel = videoCardModel;
             this.SoundCard = soundCard;
+            this.Cores = cores;
         }
         public string Processor
         {
             get
             {
+                if (string.IsNullOrEmpty(this.processor))
+                {
+                    throw new ArgumentException("The processor can not be empty");
+                }
                 return this.processor;
             }
             set
@@ -41,6 +47,10 @@
         {
             get
             {
+                if (this.ram <= 0)
+                {
+                    throw new ArgumentException("The ram can not be less or equal to zero");
+                }
                 return this.ram;
             }
             set
@@ -57,6 +67,10 @@
         {
             get
             {
+                if (this.hddSize <= 0)
+                {
+                    throw new ArgumentException("The HDD Size can not be less or equal to zero");
+                }
                 return this.hddSize;
             }
             set
@@ -73,6 +87,10 @@
         {
             get
             {
+                if (string.IsNullOrEmpty(this.videoCardModel))
+                {
+                    throw new ArgumentException("The video card model can not be empty");
+                }
                 return this.videoCardModel;
             }
             set
@@ -89,7 +107,11 @@
         {
             get
             {
-                return this.videocardMemory;
+                if (this.videoCardMemory <= 0)
+                {
+                    throw new ArgumentException("The video card memory can not be less or equal to zero");
+                }
+                return this.videoCardMemory;
             }
             set
             {
@@ -97,7 +119,7 @@
                 {
                     throw new ArgumentException("The video card memory can not be less or equal to zero");
                 }
-                this.videocardMemory = value;
+                this.videoCardMemory = value;
             }
         }
 
@@ -105,6 +127,10 @@
         {
             get
             {
+                if (string.IsNullOrEmpty(this.soundCard))
+                {
+                    throw new ArgumentException("The sound card can not be empty");
+                }
                 return this.soundCard;
             }
             set
@@ -114,6 +140,26 @@
                     throw new ArgumentException("The sound card can not be empty");
                 }
                 this.soundCard = value;
+            }
+        }
+
+        public int Cores 
+        { 
+            get
+            {
+                if (this.cores <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Number of cores must over 0");
+                }
+                return this.cores;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Number of cores must over 0");
+                }
+                this.cores = value;
             }
         }
 

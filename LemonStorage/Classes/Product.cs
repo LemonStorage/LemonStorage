@@ -9,6 +9,7 @@
         private string brand;
         private string model;
         private string color;
+        private uint quantity;
 
         public Product(decimal price, string brand, string model, string color)
         {
@@ -21,6 +22,10 @@
         {
             get
             {
+                if (this.price <= 0)
+                {
+                    throw new ArgumentException("The price can not be zero less or equal to zero.");
+                }
                 return this.price;
             }
             set
@@ -37,6 +42,10 @@
         {
             get
             {
+                if (string.IsNullOrEmpty(this.brand))
+                {
+                    throw new ArgumentException("The brand can not be empty");
+                }
                 return this.brand;
             }
             set
@@ -53,11 +62,19 @@
         //{
         //    get
         //    {
-        //        throw new System.NotImplementedException();
+        //        if (this.quantity < 0)
+        //        {
+        //            throw new ArgumentOutOfRangeException("Quantity can not be a negative number");
+        //        }
+        //        return this.quantity;
         //    }
-        //    set
+        //    private set
         //    {
-        //        throw new System.NotImplementedException();
+        //        if (value < 0)
+        //        {
+        //            throw new ArgumentOutOfRangeException("Quantity can not be a negative number");
+        //        }
+        //        this.quantity = value;
         //    }
         //}
 
@@ -66,6 +83,10 @@
         {
             get
             {
+                if (string.IsNullOrEmpty(this.model))
+                {
+                    throw new ArgumentException("The model can not be empty");
+                }
                 return this.model;
             }
             set
@@ -82,6 +103,10 @@
         {
             get
             {
+                if (string.IsNullOrEmpty(this.color))
+                {
+                    throw new ArgumentException("The color can not be empty");
+                }
                 return this.color;
             }
             set

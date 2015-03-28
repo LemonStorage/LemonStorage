@@ -6,8 +6,8 @@ using LemonStorage.Interfaces;
 
     public class DesctopPC : Computer , IProduct, IComputer
     {
-        public DesctopPC(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard)
-            :base(price, brand, model, color, processor, ram, hddSize, videoCardModel, soundCard)
+        public DesctopPC(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int cores)
+            :base(price, brand, model, color, processor, ram, hddSize, videoCardModel, soundCard, cores)
         {
 
         }
