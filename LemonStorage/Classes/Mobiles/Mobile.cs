@@ -29,7 +29,7 @@
             : base(price, brand, model, color)
         {
             this.Processor = processor;
-            this.displaySize = DisplaySize;
+            this.DisplaySize = displaySize;
             this.CamInMPix = camInMPix;
             this.Ram = ram;
             this.Rom = rom;
