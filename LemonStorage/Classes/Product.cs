@@ -9,7 +9,6 @@
         private string brand;
         private string model;
         private string color;
-        private uint quantity;
 
         public Product(decimal price, string brand, string model, string color)
         {

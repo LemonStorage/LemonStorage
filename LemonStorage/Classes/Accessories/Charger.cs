@@ -5,7 +5,6 @@
 
     class Charger : Accessories, IProduct
     {
-        private string type;
         private bool withUSBPort;
 
         public Charger(int price, string brand, string model, string color, string type, bool withUSBPort)

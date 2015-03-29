@@ -6,7 +6,6 @@
     public class MemoryCard : Accessories, IProduct
     {
         private int memorySize;
-        private string type;
 
         public MemoryCard(int price, string brand, string model, string color, int memorySize, string type)
             : base(price, brand, model, color, type)
