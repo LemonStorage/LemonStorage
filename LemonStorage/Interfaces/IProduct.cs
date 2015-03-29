@@ -9,9 +9,9 @@ namespace LemonStorage.Interfaces
         string Model { get; set; }
         string Color { get; set; }
 
-        void Save(); //Save in the data base 
+        //void Save(); //Save in the data base 
 
-        void Load(); //Load from the data base
+        //void Load(); //Load from the data base
 
         //void Buy(); //Add products
 

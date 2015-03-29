@@ -76,14 +76,14 @@
             }
         }
         // TODO: Implement the logic of the Laptop.Save()
-        public override void Save()
-        {
-            throw new NotImplementedException();
-        }
-        // TODO: Implement the logic of the Laptop.Load()
-        public override void Load()
-        {
-            throw new NotImplementedException();
-        }
+        //public override void Save()
+        //{
+        //    throw new NotImplementedException();
+        //}
+        //// TODO: Implement the logic of the Laptop.Load()
+        //public override void Load()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

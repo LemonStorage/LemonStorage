@@ -13,14 +13,14 @@
         }
 
         // TODO: Implement the logic of the SmartPhone.Save()
-        public override void Save()
-        {
-            throw new NotImplementedException();
-        }
-        // TODO: Implement the logic of the SmartPhone.Load()
-        public override void Load()
-        {
-            throw new NotImplementedException();
-        }
+        //public override void Save()
+        //{
+        //    throw new NotImplementedException();
+        //}
+        //// TODO: Implement the logic of the SmartPhone.Load()
+        //public override void Load()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

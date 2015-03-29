@@ -7,6 +7,11 @@
     {
         private int resolution;
 
+        public Scener(decimal price, string brand, string model, string color, int resolution)
+            :base(price, brand, model, color)
+        {
+            this.Resolution = resolution;
+        }
         public int Resolution
         {
             get 
@@ -23,14 +28,14 @@
             }
         }
         // TODO: Implement the logic of the Scener.Load()
-        public override void Save()
-        {
-            throw new NotImplementedException();
-        }
-        // TODO: Implement the logic of the Scener.Save()
-        public override void Load()
-        {
-            throw new NotImplementedException();
-        }
+        //public override void Save()
+        //{
+        //    throw new NotImplementedException();
+        //}
+        //// TODO: Implement the logic of the Scener.Save()
+        //public override void Load()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

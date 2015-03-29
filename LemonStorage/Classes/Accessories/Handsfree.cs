@@ -57,15 +57,15 @@
         }
 
         // TODO: Implement the logic of the Charger.Save()
-        public override void Save()
-        {
-            throw new NotImplementedException();
-        }
-        // TODO: Implement the logic of the Charger.Load()
-        public override void Load()
-        {
-            throw new NotImplementedException();
-        }
+        //public override void Save()
+        //{
+        //    throw new NotImplementedException();
+        //}
+        //// TODO: Implement the logic of the Charger.Load()
+        //public override void Load()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
-    }
+
 }

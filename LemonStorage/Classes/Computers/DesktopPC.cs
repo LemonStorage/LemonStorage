@@ -13,14 +13,14 @@ using LemonStorage.Interfaces;
         }
 
         // TODO: Implement the logic of the DesktopPC.Save()
-        public override void Save()
-        {
-            throw new NotImplementedException();
-        }
-        // TODO: Implement the logic of the DesktopPC.Load()
-        public override void Load()
-        {
-            throw new NotImplementedException();
-        }
+        //public override void Save()
+        //{
+        //    throw new NotImplementedException();
+        //}
+        //// TODO: Implement the logic of the DesktopPC.Load()
+        //public override void Load()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

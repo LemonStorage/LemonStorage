@@ -163,8 +163,8 @@
             }
         }
 
-        public abstract void Save();
+        //public abstract void Save();
 
-        public abstract void Load();
+        //public abstract void Load();
     }
 }

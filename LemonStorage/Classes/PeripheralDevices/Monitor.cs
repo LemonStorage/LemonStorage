@@ -28,14 +28,14 @@
             }
         }
         // TODO: Implement the logic of the Monitor.Save()
-        public override void Save()
-        {
-            throw new System.NotImplementedException();
-        }
-        // TODO: Implement the logic of the Monitor.Load()
-        public override void Load()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public override void Save()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
+        //// TODO: Implement the logic of the Monitor.Load()
+        //public override void Load()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
     }
 }
