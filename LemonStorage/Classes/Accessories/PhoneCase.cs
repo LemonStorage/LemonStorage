@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class PhoneCase : Accessorie, IProduct
+    public class PhoneCase : Accessories, IProduct
     {
     }
 }

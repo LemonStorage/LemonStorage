@@ -41,13 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Accessories\Accessorie.cs" />
+    <Compile Include="Classes\Accessories\BluetoothHandsfree.cs" />
+    <Compile Include="Classes\Accessories\Charger.cs" />
+    <Compile Include="Classes\Accessories\Accessories.cs" />
     <Compile Include="Classes\Accessories\Headphone.cs" />
     <Compile Include="Classes\Accessories\PhoneCase.cs" />
     <Compile Include="Classes\Accessories\LaptopBag.cs" />
     <Compile Include="Classes\Accessories\TabletCase.cs" />
     <Compile Include="Classes\Computers\Computer.cs" />
-    <Compile Include="Classes\Computers\DesctopPC.cs" />
+    <Compile Include="Classes\Computers\DesktopPC.cs" />
     <Compile Include="Classes\Computers\Laptop.cs" />
     <Compile Include="Classes\Accessories\BigHeadset.cs" />
     <Compile Include="Classes\Accessories\InEarHeadset.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Interfaces\IPeripheralDevices.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
     <Compile Include="LemonStorageMain.cs" />
+    <Compile Include="Classes\Accessories\MemoryCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

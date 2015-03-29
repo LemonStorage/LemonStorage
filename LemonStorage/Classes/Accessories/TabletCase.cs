@@ -2,7 +2,7 @@
 {
     using LemonStorage.Interfaces;
 
-    public class TabletCase :Accessorie, IProduct
+    public class TabletCase :Accessories, IProduct
     {
     }
 }
