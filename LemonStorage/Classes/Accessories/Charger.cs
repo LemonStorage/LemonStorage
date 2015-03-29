@@ -6,34 +6,34 @@
     class Charger : Accessories, IProduct
     {
         private string type;
+        private bool withUSBPort;
 
-        public Charger(int price, string brand, string model, string color, string type)
-            : base(price, brand, model, color)
+        public Charger(int price, string brand, string model, string color, string type, bool withUSBPort)
+            : base(price, brand, model, color, type)
         {
-            this.Type = type;
+            this.withUSBPort = withUSBPort;
+            // Types: For car, for computer with usb, normal or powerbank
         }
 
-        // For car, normal or powerbank
-        public string Type 
-        {
+        public bool WithUSBPort 
+        { 
             get
             {
-                if (string.IsNullOrEmpty(this.type))
+                if (this.withUSBPort == null)
                 {
-                    throw new ArgumentNullException("Type of memory card can not be empty");
+                    throw new ArgumentNullException("You must add wheather the charger has a usb port or not");
                 }
-                return this.type;
+                return this.withUSBPort;
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                if (value == null)
                 {
-                    throw new ArgumentNullException("Type of memory card can not be empty");
+                    throw new ArgumentNullException("You must add wheather the charger has a usb port or not");
                 }
-                this.type = value;
-            }
+                this.withUSBPort = value;
+            } 
         }
-
         // TODO: Implement the logic of the Charger.Save()
         public override void Save()
         {

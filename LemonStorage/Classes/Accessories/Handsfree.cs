@@ -3,16 +3,17 @@
     using LemonStorage.Interfaces;
     using System;
 
-    class BluetoothHandsfree : Accessories, IProduct
+    class Handsfree : Accessories, IProduct
     {
         private int range;
         private int batteryDuration;
 
-        public BluetoothHandsfree(int price, string brand, string model, string color, int range, int batteryDuration)
-            : base(price, brand, model, color)
+        public Handsfree(int price, string brand, string model, string color, string type, int range, int batteryDuration)
+            : base(price, brand, model, color, type)
         {
             this.Range = range;
             this.BatteryDuration = batteryDuration;
+            // Types: Wired, Bluetooth, Speakerphones 
         }
 
         public int Range

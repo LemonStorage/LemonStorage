@@ -9,10 +9,10 @@
         private string type;
 
         public MemoryCard(int price, string brand, string model, string color, int memorySize, string type)
-            : base(price, brand, model, color)
+            : base(price, brand, model, color, type)
         {
             this.MemorySize = memorySize;
-            this.Type = type;
+            // Types: M2, SD, microSD
         }
 
         public int MemorySize
@@ -32,27 +32,6 @@
                     throw new ArgumentOutOfRangeException("Size of memory must be a positive number");
                 }
                 this.memorySize = value;
-            }
-        }
-
-        // M2, SD, microSD
-        public string Type
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(this.type))
-                {
-                    throw new ArgumentNullException("Type of memory card can not be empty");
-                }
-                return this.type;
-            }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentNullException("Type of memory card can not be empty");
-                }
-                this.type = value;
             }
         }
 
