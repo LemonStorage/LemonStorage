@@ -24,7 +24,7 @@
         static void Main()
         {
            
-            Laptop lap = new Laptop(1200, "Apple", "Macbook", "White", "IntelCorei7", 3, 520, "Nehto", "Neshto", 8, 15.6, 5, 6);
+            Laptop lap = new Laptop(1200, "Apple", "Macbook", "White", "IntelCorei7", 3072, 520, "Nehto", "Neshto", 8, 1.6, 15.6, 4);
             SqlConnection conn = CreateConnection();
             using (conn)
             {

@@ -5,21 +5,33 @@
 
     public class Headphone : Product, IProduct
     {
+        private const int MinWeight = 10;
+        private const int MaxWeight = 400;
+        private const int MinLowFrequency = 5;
+        private const int MaxLowFrequency = 35;
+        private const int MinHighFrequency = 18000;
+        private const int MaxHighFrequency = 40000;
+        private const int MinSensitivity = 12;
+        private const int MaxSensitivity = 125;
+        private const int MaxInputPower = 400;
+        private const double MinLengthOfConnection = 0.40;
+
+
         private int weightInGrams;
-        private int minFrequencyInHz; //:5 - 42,000Hz        
-        private int maxFrequencyInHz; 
-        private int sensitivityINkHz; // max 125dB
+        private int lowFrequencyInHz; //:5 - 42,000Hz        
+        private int highFrequencyInHz; 
+        private int sensitivityInDB; // max 125dB
         private int inputPowerINmW;     // max 400mW
         private double lengthOfConnectionInMeters; // >0
         private string conectorType; // Wired or Cable
 
-        public Headphone(int price, string brand, string model, string color, int weightInGrams, int minFrequencyInHz, int maxFrequencyInHz, int sensitivityINkHz, int inputPowerINmW, double lengthOfConnectionInMeters, string conectorType)
+        public Headphone(int price, string brand, string model, string color, int weightInGrams, int lowFrequencyInHz, int highFrequencyInHz, int sensitivityInDB, int inputPowerINmW, double lengthOfConnectionInMeters, string conectorType)
             : base(price, brand, model, color)
         {
             this.WeightInGrams = weightInGrams;
-            this.MinFrequencyInHz = minFrequencyInHz;
-            this.MaxFrequencyInHz = maxFrequencyInHz;
-            this.SensitivityINkHz = sensitivityINkHz;
+            this.LowFrequencyInHz = lowFrequencyInHz;
+            this.HighFrequencyInHz = highFrequencyInHz;
+            this.SensitivityInDB = sensitivityInDB;
             this.InputPowerINmW = inputPowerINmW;
             this.LengthOfConnectionInMeters = lengthOfConnectionInMeters;
             this.ConectorType = conectorType;
@@ -27,101 +39,86 @@
         public int WeightInGrams           
         {
             get
-            {
-                if (this.weightInGrams < 0)
-                {
-                    throw new ArgumentException("The Weight can't be negative!");
-                }
+            {               
                 return this.weightInGrams;
             }
             set
             {
-                if (value < 0)
+                if (value < MinWeight || value > MaxWeight)
                 {
-                    throw new ArgumentException("The Weight can't be negative!");
+                    throw new ArgumentException(string.Format
+                    ("Weight must be from {0} to {1} Hz.", MinWeight, MaxWeight));
                 }
                 this.weightInGrams = value;
             }
         }
 
-        public int MinFrequencyInHz
+        public int LowFrequencyInHz
         {
             get
-            {
-                if (this.minFrequencyInHz <= 4)
-                {
-                    throw new ArgumentException("Mininum Frequency must be bigger of 4Hz!");
-                }
-                return this.minFrequencyInHz;
+            {                
+                return this.lowFrequencyInHz;
             }
             set
             {
-                if (this.minFrequencyInHz <= 4)
+                if (value < MinLowFrequency || value > MaxLowFrequency)
                 {
-                    throw new ArgumentException("Mininum Frequency must be bigger of 4Hz!");
+                    throw new ArgumentException(string.Format
+                    ("Lower bound must be from {0} to {1} Hz.", MinLowFrequency, MaxLowFrequency));
                 }
-                this.minFrequencyInHz = value;
+                this.lowFrequencyInHz = value;
             }
         }
 
-        public int MaxFrequencyInHz
+        public int HighFrequencyInHz
         {
             get
-            {
-                if (this.maxFrequencyInHz >= 50000 && this.maxFrequencyInHz < 4)
-                {
-                    throw new ArgumentException("Maximum Frequency must be between 5 and 50000Hz!");
-                }
-                return this.maxFrequencyInHz;
+            {                
+                return this.highFrequencyInHz;
             }
             set
             {
-                if (this.maxFrequencyInHz >= 50000 && this.maxFrequencyInHz < 4)
+                if (value < MinHighFrequency || value > MaxHighFrequency)
                 {
-                    throw new ArgumentException("Maximum Frequency must be between 5 and 50000Hz!");
+                    throw new ArgumentException(string.Format
+                        ("High frequency must be between {0} and {1}Hz!", MinHighFrequency, MaxHighFrequency));
                 }
-                this.maxFrequencyInHz = value;
+                this.highFrequencyInHz = value;
 
             }
         }
 
 
-        public int SensitivityINkHz
+        public int SensitivityInDB
         {
 
             get
-            {
-                if (this.sensitivityINkHz >= 125 && this.sensitivityINkHz < 0)
-                {
-                    throw new ArgumentException("Maximum Frequency must be maximum 125dB!");
-                }
-                return this.sensitivityINkHz;
+            {               
+                return this.sensitivityInDB;
             }
             set
             {
-                if (this.sensitivityINkHz >= 125 && this.sensitivityINkHz < 0)
+                if (value < MinSensitivity || value > MaxSensitivity)
                 {
-                    throw new ArgumentException("Maximum Frequency must be maximum 125dB!");
+                    throw new ArgumentException(string.Format
+                        ("Sensitivity must be minimum {0}dB maximum {1}dB!", MinSensitivity, MaxSensitivity));
                 }
-                this.sensitivityINkHz = value;
+                this.sensitivityInDB = value;
             }
         }
 
         public int InputPowerINmW
         {
             get
-            {
-                if (this.inputPowerINmW >= 400 && this.inputPowerINmW < 0)
-                {
-                    throw new ArgumentException("Maximum Frequency must be maximum 400mW!");
-                }
+            {                
                 return this.inputPowerINmW;
             }
             set
             {
-                if (this.inputPowerINmW >= 400 && this.inputPowerINmW < 0)
+                if (value < 0 || value > MaxInputPower)
                 {
-                    throw new ArgumentException("Maximum Frequency must be maximum 400mW!");
+                    throw new ArgumentException(string.Format
+                        ("Input power must be maximum {0}mW!", MaxInputPower));
                 }
                 this.inputPowerINmW = value;
             }
@@ -131,18 +128,15 @@
         public double LengthOfConnectionInMeters
         {
             get
-            {
-                if (this.lengthOfConnectionInMeters <= 0)
-                {
-                    throw new ArgumentException("Length of the cable must be positiv number !");
-                }
+            {              
                 return this.lengthOfConnectionInMeters;
             }
             set
             {
-                if (this.lengthOfConnectionInMeters <= 0)
+                if (value < MinLengthOfConnection)
                 {
-                    throw new ArgumentException("Length of the cable must be positiv number !");
+                    throw new ArgumentException(string.Format 
+                        ("Length of the cable must be bigger than {0}!", MinLengthOfConnection));
                 }
                 this.lengthOfConnectionInMeters = value;
             }
@@ -151,7 +145,10 @@
 
         public string ConectorType
         {
-            get { return this.conectorType; }
+            get 
+            {
+                return this.conectorType; 
+            }
             set
             {
                 if (value != "Wireless" && value != "Cable")

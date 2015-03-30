@@ -5,6 +5,9 @@
 
     public class BigHeadset : Headphone, IProduct
     {
+        private const double MinDiameter = 2;
+        private const double MaxDiameter = 15;
+
         private double diametreInSantimeters;
 
         public BigHeadset(int price, string brand, string model, string color, int weightInGrams, int minFrequencyInHz, int maxFrequencyInHz, int sensitivityINkHz, int inputPowerINmW, double lengthOfConnectionInMeters, string conectorType, double diametre)
@@ -15,12 +18,16 @@
 
         public double DiametreInSantimeters
         {
-            get { return this.diametreInSantimeters; }
+            get 
+            {
+                return this.diametreInSantimeters; 
+            }
             set
             {
-                if (value < 0)
+                if (value < MinDiameter || value > MaxDiameter)
                 {
-                    throw new ArgumentException("The diametre can't be negative!");
+                    throw new ArgumentException(string.Format
+                    ("The diametre can be form {0} to {1} cm.", MinDiameter, MaxDiameter));
                 }
                 this.diametreInSantimeters = value;
             }

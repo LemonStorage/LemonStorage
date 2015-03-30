@@ -5,72 +5,71 @@
 
     public class Laptop : Computer, IProduct, IComputer
     {
-        private int batteryDuration;
-        private double weight;
-        private int size;
+        private const int MinBattDuration = 1;
+        private const int MaxBattDuration = 16;
+        private const double MinWeight = 0.350;
+        private const double MaxWeight = 5.4;
+        private const double MinSize = 7;
+        private const double MaxSize = 21.2;
+
+        private int batteryDurationInHours;
+        private double weightInKG;
+        private double size;
         
-        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weight, int size, int cores)
+        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weightInKG, double size, byte cores)
             :base(price, brand,model,color,processor,ram,hddSize,videoCardModel,soundCard, cores)
         {
             this.BatteryDuration = batteryDuration;
-            this.Weight = weight;
+            this.Weight = weightInKG;
             this.Size = size;
         }
 
         public int BatteryDuration
         {
             get 
-            {
-                if (this.batteryDuration <= 0)
-                {
-                    throw new ArgumentException("The battery duration can not be less or equal to zero");
-                }
-                return this.batteryDuration; 
+            {               
+                return this.batteryDurationInHours; 
             }
             set 
             {
-                if (value <= 0)
+                if (value < MinBattDuration || value > MaxBattDuration)
                 {
-                    throw new ArgumentException("The battery duration can not be less or equal to zero");
+                    throw new ArgumentException(string.Format
+                        ("The battery duration can be from {0} to {1} hours", MinBattDuration,MaxBattDuration));
                 }
-                this.batteryDuration = value; 
+                this.batteryDurationInHours = value; 
             }
         }
+
         public double Weight
         {
             get 
             {
-                if (this.weight <= 0)
-                {
-                    throw new ArgumentException("The laptop weight can not be less or equal to zero");
-                }
-                return this.weight; 
+                return this.weightInKG; 
             }
             set 
             {
-                if (value <= 0)
+                if (value < MinWeight || value > MaxWeight)
                 {
-                    throw new ArgumentException("The laptop weight can not be less or equal to zero");
+                    throw new ArgumentException(string.Format
+                        ("The laptop weight can be from {0} to {1}", MinWeight, MaxWeight));
                 }
-                this.weight = value; 
+                this.weightInKG = value; 
             }
         }
 
-        public int Size
+        public double Size
         {
             get 
-            {
-                if (this.size <= 0)
-                {
-                    throw new ArgumentException("The size of the laptop can not be less or equal to zero");
-                }
+            {               
                 return this.size; 
             }
             set 
             {
-                if (value <= 0)
+                if (value < MinSize || value > MaxSize)
                 {
-                    throw new ArgumentException("The size of the laptop can not be less or equal to zero");
+                    throw new ArgumentException(string.Format
+                        ("The size of the laptop can be from {0} to {1}", MinSize, MaxSize));
                 }
                 this.size = value; 
             }

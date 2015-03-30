@@ -31,7 +31,7 @@
                 }
                 if (value % 2 != 0)
                 {
-                    throw new ArgumentException("Memory size must devide by 2");
+                    throw new ArgumentException("Memory size must devidible by 2");
                 }
                 this.memorySizeInMB = value;
             }
