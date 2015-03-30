@@ -6,13 +6,13 @@
     public class LaptopBag : Accessories, IProduct
     {
         private string material;
-        private double compatibility; //Example: for laptop 15 inches
+        private double maximumCapacityInInches; //Example: for laptop 15.6 inches
 
-         public LaptopBag(int price, string brand, string model, string color, string type, string material, double compatibility)
+        public LaptopBag(int price, string brand, string model, string color, string type, string material, double maximumCapacityInInches)
             : base(price, brand, model, color, type)
         {
             this.Material = material;
-            this.Compatibility = compatibility;
+            this.MaximumCapacityInInches = maximumCapacityInInches;
         }
 
          public string Material
@@ -22,22 +22,22 @@
              {
                  if (string.IsNullOrEmpty(this.material))
                  {
-                     throw new ArgumentNullException("Material can not be empty");
+                     throw new ArgumentNullException("Describe the material!");
                  }
                  this.material = value;
              }
          }
 
-         public double Compatibility
+         public double MaximumCapacityInInches
          {
-             get { return this.compatibility; }
+             get { return this.maximumCapacityInInches; }
              set
              {
                  if (value<0)
                  {
-                     throw new ArgumentNullException("Compatibility can not be negative number!");
+                     throw new ArgumentNullException("Capacity can not be negative number!");
                  }
-                 this.compatibility = value;
+                 this.maximumCapacityInInches = value;
              }
          }
     }

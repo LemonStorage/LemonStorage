@@ -14,7 +14,6 @@
              this.Material = material;
              this.Compatibility = compatibility;
         }
-
          public string Material
          {
              get { return this.material; }
