@@ -5,9 +5,12 @@
 
     public abstract class Computer : Product, IProduct, IComputer
     {
+        private const uint MinRam = 512;
+        private const uint MinHDDSize = 128;
+
         private string processor;
-        private uint ram;
-        private uint hddSize;
+        private uint ramInMB;
+        private uint hddSizeInGB;
         private string videoCardModel;
         private uint videoCardMemory;
         private string soundCard;
@@ -26,11 +29,7 @@
         public string Processor
         {
             get
-            {
-                if (string.IsNullOrEmpty(this.processor))
-                {
-                    throw new ArgumentException("The processor can not be empty");
-                }
+            {                
                 return this.processor;
             }
             set
@@ -46,12 +45,8 @@
         public uint Ram
         {
             get
-            {
-                if (this.ram <= 0)
-                {
-                    throw new ArgumentException("The ram can not be less or equal to zero");
-                }
-                return this.ram;
+            {                
+                return this.ramInMB;
             }
             set
             {
@@ -59,7 +54,7 @@
                 {
                     throw new ArgumentException("The ram can not be less or equal to zero");
                 }
-                this.ram = value;
+                this.ramInMB = value;
             }
         }
 
@@ -67,11 +62,11 @@
         {
             get
             {
-                if (this.hddSize <= 0)
+                if (this.hddSizeInGB <= 0)
                 {
                     throw new ArgumentException("The HDD Size can not be less or equal to zero");
                 }
-                return this.hddSize;
+                return this.hddSizeInGB;
             }
             set
             {
@@ -79,7 +74,7 @@
                 {
                     throw new ArgumentException("The HDD Size can not be less or equal to zero");
                 }
-                this.hddSize = value;
+                this.hddSizeInGB = value;
             }
         }
 

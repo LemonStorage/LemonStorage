@@ -17,7 +17,10 @@
 
          public string Material
          {
-             get { return this.material; }
+             get 
+             {
+                 return this.material; 
+             }
              set
              {
                  if (string.IsNullOrEmpty(this.material))
@@ -30,7 +33,10 @@
 
          public string Compatibility
          {
-             get { return this.compatibility; }
+             get 
+             { 
+                 return this.compatibility;
+             }
              set
              {
                  if (string.IsNullOrEmpty(this.compatibility))

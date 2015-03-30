@@ -17,10 +17,6 @@
         {
             get
             {
-                if (string.IsNullOrEmpty(this.type))
-                {
-                    throw new ArgumentNullException("Type can not be empty");
-                }
                 return this.type;
             }
             set

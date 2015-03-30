@@ -3,12 +3,12 @@
 
     public interface IComputer
     {
-        public string Processor { get; set; }
-        public uint Ram { get; set; }
-        public uint HDDSize { get; set; }
-        public string VideoCardModel { get; set; }
-        public uint VideocardMemory { get; set; }
-        public string SoundCard { get; set; }
+         string Processor { get; set; }
+         uint Ram { get; set; }
+         uint HDDSize { get; set; }
+         string VideoCardModel { get; set; }
+         uint VideocardMemory { get; set; }
+         string SoundCard { get; set; }
 
     }
 }

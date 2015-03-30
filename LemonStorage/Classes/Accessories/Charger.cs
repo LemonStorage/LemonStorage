@@ -17,11 +17,7 @@
         public bool WithUSBPort 
         { 
             get
-            {
-                //if (this.withUSBPort == null)
-                //{
-                //    throw new ArgumentNullException("You must add wheather the charger has a usb port or not");
-                //}
+            {                
                 return this.withUSBPort;
             }
             set

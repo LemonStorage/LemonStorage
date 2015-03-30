@@ -5,7 +5,9 @@
 
     public class MemoryCard : Accessories, IProduct
     {
-        private int memorySize;
+        private const int MinMemoriSize = 256;
+
+        private int memorySizeInMB;
 
         public MemoryCard(int price, string brand, string model, string color, int memorySize, string type)
             : base(price, brand, model, color, type)
@@ -17,20 +19,21 @@
         public int MemorySize
         {
             get
-            {
-                if (this.memorySize <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Size of memory must be a positive number");
-                }
-                return this.memorySize;
+            {               
+                return this.memorySizeInMB;
             }
             set
             {
-                if (value <= 0)
+                if (value <= MinMemoriSize)
                 {
-                    throw new ArgumentOutOfRangeException("Size of memory must be a positive number");
+                    throw new ArgumentOutOfRangeException(string.Format
+                        ("Size of memory must be more than {0}", MinMemoriSize));
                 }
-                this.memorySize = value;
+                if (value % 2 != 0)
+                {
+                    throw new ArgumentException("Memory size must devide by 2");
+                }
+                this.memorySizeInMB = value;
             }
         }
 

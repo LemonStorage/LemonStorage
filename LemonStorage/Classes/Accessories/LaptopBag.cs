@@ -5,6 +5,8 @@
 
     public class LaptopBag : Accessories, IProduct
     {
+        private const double MinCapacity = 7;
+
         private string material;
         private double maximumCapacityInInches; //Example: for laptop 15.6 inches
 
@@ -17,7 +19,10 @@
 
          public string Material
          {
-             get { return this.material; }
+             get
+             {
+                 return this.material; 
+             }
              set
              {
                  if (string.IsNullOrEmpty(this.material))
@@ -30,12 +35,15 @@
 
          public double MaximumCapacityInInches
          {
-             get { return this.maximumCapacityInInches; }
+             get 
+             {
+                 return this.maximumCapacityInInches; 
+             }
              set
              {
-                 if (value<0)
+                 if (value < MinCapacity)
                  {
-                     throw new ArgumentNullException("Capacity can not be negative number!");
+                     throw new ArgumentNullException(string.Format("Capacity can not be less than {0}!", MinCapacity));
                  }
                  this.maximumCapacityInInches = value;
              }
