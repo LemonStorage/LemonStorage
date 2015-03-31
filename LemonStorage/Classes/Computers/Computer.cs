@@ -1,6 +1,7 @@
 ﻿namespace LemonStorage.Classes.Computers
 {
     using LemonStorage.Interfaces;
+    using LemonStorage.Classes.ExceptionClasses;
     using System;
 
     public abstract class Computer : Product, IProduct, IComputer
@@ -149,8 +150,8 @@
             {
                 if (value < MinNumOfCores || value > MaxNumOfCores )
                 {
-                    throw new ArgumentOutOfRangeException(string.Format
-                        ("Number of cores can be from {0} to {1}", MinNumOfCores, MaxNumOfCores));
+                    throw new InvalidRangeException<byte>(string.Format
+                        ("Number of cores \"{0}\" are out of range", value), MinNumOfCores, MaxNumOfCores);
                 }
                 this.cores = value;
             }
