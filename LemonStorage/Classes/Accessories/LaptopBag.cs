@@ -7,32 +7,16 @@
     {
         private const double MinCapacity = 7;
 
-        private string material;
         private double maximumCapacityInInches; //Example: for laptop 15.6 inches
+        private string wearingStyle; //backpack, bag
 
-        public LaptopBag(int price, string brand, string model, string color, string type, string material, double maximumCapacityInInches)
-            : base(price, brand, model, color, type)
+        public LaptopBag(int price, string brand, string model, string color, string material, double maximumCapacityInInches, string wearingStyle)
+            : base(price, brand, model, color, material)
         {
-            this.Material = material;
             this.MaximumCapacityInInches = maximumCapacityInInches;
+            this.WearingStyle = wearingStyle;
         }
-
-         public string Material
-         {
-             get
-             {
-                 return this.material; 
-             }
-             set
-             {
-                 if (string.IsNullOrEmpty(this.material))
-                 {
-                     throw new ArgumentNullException("Describe the material!");
-                 }
-                 this.material = value;
-             }
-         }
-
+         
          public double MaximumCapacityInInches
          {
              get 
@@ -46,6 +30,22 @@
                      throw new ArgumentNullException(string.Format("Capacity can not be less than {0}!", MinCapacity));
                  }
                  this.maximumCapacityInInches = value;
+             }
+         }
+
+         public string WearingStyle
+         {
+             get
+             {
+                 return this.wearingStyle;
+             }
+             set
+             {
+                 if (string.IsNullOrEmpty(value))
+                 {
+                     throw new ArgumentNullException("Wearing style can not be empty!");
+                 }
+                 this.wearingStyle = value;
              }
          }
     }
