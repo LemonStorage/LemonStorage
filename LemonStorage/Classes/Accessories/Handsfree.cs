@@ -8,12 +8,14 @@
         private const int MinBatteryDuration = 5;
         private const int MinRange = 1;
 
+        private string typeOfConnection;
         private int rangeInMeters;
         private int batteryDurationInHours;
 
-        public Handsfree(int price, string brand, string model, string color, string type, int range, int batteryDuration)
-            : base(price, brand, model, color, type)
+        public Handsfree(int price, string brand, string model, string color, string material, int range, int batteryDuration)
+            : base(price, brand, model, color, material)
         {
+            this.TypeOfConnection = typeOfConnection;
             this.Range = range;
             this.BatteryDuration = batteryDuration;
             // Types: Wired, Bluetooth, Speakerphones 
@@ -50,6 +52,22 @@
                         ("Working hours on battery must be more than {0} hours", MinBatteryDuration));
                 }
                 this.batteryDurationInHours = value;
+            }
+        }
+
+        public string TypeOfConnection
+        {
+            get
+            {
+                return this.typeOfConnection;
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("Type of connection can be empty");
+                }
+                this.typeOfConnection = value;
             }
         }
     }
