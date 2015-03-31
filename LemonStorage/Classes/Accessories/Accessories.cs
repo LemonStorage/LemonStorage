@@ -5,19 +5,19 @@
 
     public abstract class Accessories : Product, IProduct
     {
-        private string type;
+        private string material;
 
-        public Accessories(int price, string brand, string model, string color, string type)
+        public Accessories(int price, string brand, string model, string color, string material)
             : base(price, brand, model, color)
         {
-            this.Type = type;
+            this.Material = material;
         }
 
-        public string Type
+        public string Material
         {
             get
             {
-                return this.type;
+                return this.material;
             }
             set
             {
@@ -25,7 +25,7 @@
                 {
                     throw new ArgumentNullException("Type can not be empty");
                 }
-                this.type = value;
+                this.material = value;
             }
         }
     }
