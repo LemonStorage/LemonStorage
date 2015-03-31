@@ -11,16 +11,5 @@
         {
 
         }
-
-        // TODO: Implement the logic of the Tablet.Save()
-        //public override void Save()
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //// TODO: Implement the logic of the Tablet.Load()
-        //public override void Load()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

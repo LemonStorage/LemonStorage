@@ -11,16 +11,5 @@
         {
 
         }
-
-        // TODO: Implement the logic of the MobilePhone.Save()
-        //public override void Save()
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //// TODO: Implement the logic of the MobilePhone.Load()
-        //public override void Load()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

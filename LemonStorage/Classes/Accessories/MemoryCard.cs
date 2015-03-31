@@ -36,16 +36,5 @@
                 this.memorySizeInMB = value;
             }
         }
-
-        // TODO: Implement the logic of the MemoryCard.Save()
-        //public override void Save()
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //// TODO: Implement the logic of the MemoryCard.Load()
-        //public override void Load()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

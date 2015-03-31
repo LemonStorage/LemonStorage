@@ -22,22 +22,8 @@
             }
             set
             {
-                //if (value == null)
-                //{
-                //    throw new ArgumentNullException("You must add wheather the charger has a usb port or not");
-                //}
                 this.withUSBPort = value;
             } 
         }
-        // TODO: Implement the logic of the Charger.Save()
-        //public override void Save()
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //// TODO: Implement the logic of the Charger.Load()
-        //public override void Load()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

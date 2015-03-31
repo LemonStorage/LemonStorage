@@ -57,27 +57,6 @@
             }
         }
 
-        //public uint Quantity
-        //{
-        //    get
-        //    {
-        //        if (this.quantity < 0)
-        //        {
-        //            throw new ArgumentOutOfRangeException("Quantity can not be a negative number");
-        //        }
-        //        return this.quantity;
-        //    }
-        //    private set
-        //    {
-        //        if (value < 0)
-        //        {
-        //            throw new ArgumentOutOfRangeException("Quantity can not be a negative number");
-        //        }
-        //        this.quantity = value;
-        //    }
-        //}
-
-
         public string Model
         {
             get
@@ -117,24 +96,5 @@
                 this.color = value;
             }
         }
-
-        //public abstract void Save();
-
-        //public abstract void Load();
-
-        //public void Buy()
-        //{
-        //    throw new System.NotImplementedException();
-        //}
-
-        //public void Sell()
-        //{
-        //    throw new System.NotImplementedException();
-        //}
-
-        //int IProduct.Quantity()
-        //{
-        //    throw new System.NotImplementedException();
-        //}
     }
 }

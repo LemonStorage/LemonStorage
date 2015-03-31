@@ -10,8 +10,5 @@
         {
 
         }
-        //public abstract void Save();
-
-        //public abstract void Load();
     }
 }

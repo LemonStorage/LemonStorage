@@ -84,7 +84,6 @@
                         ("High frequency must be between {0} and {1}Hz!", MinHighFrequency, MaxHighFrequency));
                 }
                 this.highFrequencyInHz = value;
-
             }
         }
 
@@ -122,7 +121,6 @@
                 }
                 this.inputPowerINmW = value;
             }
-
         }
 
         public double LengthOfConnectionInMeters
@@ -140,7 +138,6 @@
                 }
                 this.lengthOfConnectionInMeters = value;
             }
-
         }
 
         public string ConectorType
@@ -158,6 +155,5 @@
                 this.conectorType = value;
             }
         }
-
     }
 }
