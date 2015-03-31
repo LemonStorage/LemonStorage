@@ -5,31 +5,13 @@
 
     public class PhoneCase : Accessories, IProduct
     {
-        private string material;
         private string compatibility;//With which phone is it compatible
 
-        public PhoneCase(int price, string brand, string model, string color, string type, string material, string compatibility)
-            : base(price, brand, model, color, type)
+        public PhoneCase(int price, string brand, string model, string color, string material, string compatibility)
+            : base(price, brand, model, color, material)
         {
-            this.Material = material;
             this.Compatibility = compatibility;
-        }
-
-         public string Material
-         {
-             get 
-             {
-                 return this.material; 
-             }
-             set
-             {
-                 if (string.IsNullOrEmpty(this.material))
-                 {
-                     throw new ArgumentNullException("Material can not be empty");
-                 }
-                 this.material = value;
-             }
-         }
+        }         
 
          public string Compatibility
          {

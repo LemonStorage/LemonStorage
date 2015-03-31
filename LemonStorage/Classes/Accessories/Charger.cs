@@ -7,8 +7,8 @@
     {
         private bool withUSBPort;
 
-        public Charger(int price, string brand, string model, string color, string type, bool withUSBPort)
-            : base(price, brand, model, color, type)
+        public Charger(int price, string brand, string model, string color, string material, bool withUSBPort)
+            : base(price, brand, model, color, material)
         {
             this.withUSBPort = withUSBPort;
             // Types: For car, for computer with usb, normal or powerbank

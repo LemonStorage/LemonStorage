@@ -5,12 +5,12 @@
 
     public class MemoryCard : Accessories, IProduct
     {
-        private const int MinMemoriSize = 256;
+        private const int MinMemoriSizeInMB = 256;
 
         private int memorySizeInMB;
 
-        public MemoryCard(int price, string brand, string model, string color, int memorySize, string type)
-            : base(price, brand, model, color, type)
+        public MemoryCard(int price, string brand, string model, string color, int memorySize, string material)
+            : base(price, brand, model, color, material)
         {
             this.MemorySize = memorySize;
             // Types: M2, SD, microSD
@@ -24,10 +24,10 @@
             }
             set
             {
-                if (value <= MinMemoriSize)
+                if (value <= MinMemoriSizeInMB)
                 {
                     throw new ArgumentOutOfRangeException(string.Format
-                        ("Size of memory must be more than {0}", MinMemoriSize));
+                        ("Size of memory must be more than {0}", MinMemoriSizeInMB));
                 }
                 if (value % 2 != 0)
                 {

@@ -5,7 +5,7 @@
 
     public abstract class Accessories : Product, IProduct
     {
-        private string material;
+        private string material; // Plastic , Metal, Aluminium ...
 
         public Accessories(int price, string brand, string model, string color, string material)
             : base(price, brand, model, color)
@@ -23,7 +23,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Type can not be empty");
+                    throw new ArgumentNullException("Material can not be empty");
                 }
                 this.material = value;
             }
