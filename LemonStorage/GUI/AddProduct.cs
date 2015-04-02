@@ -119,7 +119,7 @@ namespace LemonStorage.GUI
                 {
                     Laptop laptop = new Laptop(decimal.Parse(Price.Text), Brand.Text, Model.Text, Color.Text, Processor.Text,
                    uint.Parse(RAM.Text), uint.Parse(HDD.Text), VideoCard.Text, SoundCard.Text, int.Parse(BatteryDuration.Text)
-                   , double.Parse(Weight.Text), int.Parse(Size.Text), int.Parse(Core.Text));
+                   , double.Parse(Weight.Text), int.Parse(Size.Text), byte.Parse(Core.Text));
                     laptop.SaveToSQL();
                     FieldsClear();
                     this.Close();
@@ -127,7 +127,7 @@ namespace LemonStorage.GUI
                 if ((string)comboBox2.SelectedItem == "Desktop Computer")
                 {
                     DesktopPC pc = new DesktopPC(decimal.Parse(Price.Text), Brand.Text, Model.Text, Color.Text, Processor.Text,
-                        uint.Parse(RAM.Text), uint.Parse(HDD.Text), VideoCard.Text, SoundCard.Text, int.Parse(Core.Text));
+                        uint.Parse(RAM.Text), uint.Parse(HDD.Text), VideoCard.Text, SoundCard.Text, byte.Parse(Core.Text));
                     pc.SaveToSQL();
                     FieldsClear();
                     this.Close();

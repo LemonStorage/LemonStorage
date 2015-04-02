@@ -11,7 +11,7 @@
         private double weight;
         private int size;
 
-        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weight, int size, int cores)
+        public Laptop(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int batteryDuration, double weight, int size, byte cores)
             : base(price, brand, model, color, processor, ram, hddSize, videoCardModel, soundCard, cores)
         {
             this.BatteryDuration = batteryDuration;

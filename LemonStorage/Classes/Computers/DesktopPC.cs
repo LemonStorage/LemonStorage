@@ -8,7 +8,7 @@
 
     public class DesktopPC : Computer, IProduct, IComputer
     {
-        public DesktopPC(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int cores)
+        public DesktopPC(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, byte cores)
             : base(price, brand, model, color, processor, ram, hddSize, videoCardModel, soundCard, cores)
         {
 
