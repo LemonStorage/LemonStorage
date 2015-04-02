@@ -5,11 +5,12 @@
 
     public class MemoryCard : Accessories, IProduct
     {
-        private int memorySize;
-        private string type;
+        private const int MinMemoriSizeInMB = 256;
 
-        public MemoryCard(int price, string brand, string model, string color, int memorySize, string type)
-            : base(price, brand, model, color, type)
+        private int memorySizeInMB;
+
+        public MemoryCard(int price, string brand, string model, string color, int memorySize, string material)
+            : base(price, brand, model, color, material)
         {
             this.MemorySize = memorySize;
             // Types: M2, SD, microSD
@@ -18,32 +19,22 @@
         public int MemorySize
         {
             get
-            {
-                if (this.memorySize <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Size of memory must be a positive number");
-                }
-                return this.memorySize;
+            {               
+                return this.memorySizeInMB;
             }
             set
             {
-                if (value <= 0)
+                if (value <= MinMemoriSizeInMB)
                 {
-                    throw new ArgumentOutOfRangeException("Size of memory must be a positive number");
+                    throw new ArgumentOutOfRangeException(string.Format
+                        ("Size of memory must be more than {0}", MinMemoriSizeInMB));
                 }
-                this.memorySize = value;
+                if (value % 2 != 0)
+                {
+                    throw new ArgumentException("Memory size must devidible by 2");
+                }
+                this.memorySizeInMB = value;
             }
         }
-
-        // TODO: Implement the logic of the MemoryCard.Save()
-        //public override void Save()
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //// TODO: Implement the logic of the MemoryCard.Load()
-        //public override void Load()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

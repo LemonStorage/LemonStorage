@@ -5,36 +5,28 @@
 
     public abstract class Accessories : Product, IProduct
     {
-        private string type;
+        private string material; // Plastic , Metal, Aluminium ...
 
-        public Accessories(int price, string brand, string model, string color, string type)
+        public Accessories(int price, string brand, string model, string color, string material)
             : base(price, brand, model, color)
         {
-            this.Type = type;
+            this.Material = material;
         }
 
-        public string Type
+        public string Material
         {
             get
             {
-                if (string.IsNullOrEmpty(this.type))
-                {
-                    throw new ArgumentNullException("Type can not be empty");
-                }
-                return this.type;
+                return this.material;
             }
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Type can not be empty");
+                    throw new ArgumentNullException("Material can not be empty");
                 }
-                this.type = value;
+                this.material = value;
             }
         }
-
-        //public abstract void Save();
-
-        //public abstract void Load();
     }
 }

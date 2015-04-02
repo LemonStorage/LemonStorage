@@ -27,15 +27,5 @@
                 this.resolution = value; 
             }
         }
-        // TODO: Implement the logic of the Scener.Load()
-        //public override void Save()
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //// TODO: Implement the logic of the Scener.Save()
-        //public override void Load()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

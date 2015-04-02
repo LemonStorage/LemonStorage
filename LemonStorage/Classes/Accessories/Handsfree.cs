@@ -5,12 +5,17 @@
 
     class Handsfree : Accessories, IProduct
     {
-        private int range;
-        private int batteryDuration;
+        private const int MinBatteryDuration = 5;
+        private const int MinRange = 1;
 
-        public Handsfree(int price, string brand, string model, string color, string type, int range, int batteryDuration)
-            : base(price, brand, model, color, type)
+        private string typeOfConnection;
+        private int rangeInMeters;
+        private int batteryDurationInHours;
+
+        public Handsfree(int price, string brand, string model, string color, string material, int range, int batteryDuration)
+            : base(price, brand, model, color, material)
         {
+            this.TypeOfConnection = typeOfConnection;
             this.Range = range;
             this.BatteryDuration = batteryDuration;
             // Types: Wired, Bluetooth, Speakerphones 
@@ -19,53 +24,51 @@
         public int Range
         {
             get
-            {
-                if (this.range <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Range of the bluetooth handsfree must be a positive number");
-                }
-                return this.range;
+            {                
+                return this.rangeInMeters;
             }
             set
             {
-                if (value <= 0)
+                if (value <= MinRange)
                 {
-                    throw new ArgumentOutOfRangeException("Range of the bluetooth handsfree must be a positive number");
+                    throw new ArgumentOutOfRangeException(string.Format
+                        ("Range of the bluetooth handsfree more than {0}", MinRange));
                 }
-                this.range = value;
+                this.rangeInMeters = value;
             }
         }
 
         public int BatteryDuration
         {
             get
-            {
-                if (this.batteryDuration <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Range of the bluetooth handsfree must be a positive number");
-                }
-                return this.batteryDuration;
+            {               
+                return this.batteryDurationInHours;
             }
             set
             {
-                if (value <= 0)
+                if (value <= MinBatteryDuration)
                 {
-                    throw new ArgumentOutOfRangeException("Range of the bluetooth handsfree must be a positive number");
+                    throw new ArgumentOutOfRangeException(string.Format
+                        ("Working hours on battery must be more than {0} hours", MinBatteryDuration));
                 }
-                this.batteryDuration = value;
+                this.batteryDurationInHours = value;
             }
         }
 
-        // TODO: Implement the logic of the Charger.Save()
-        //public override void Save()
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //// TODO: Implement the logic of the Charger.Load()
-        //public override void Load()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public string TypeOfConnection
+        {
+            get
+            {
+                return this.typeOfConnection;
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("Type of connection can be empty");
+                }
+                this.typeOfConnection = value;
+            }
+        }
     }
-
 }

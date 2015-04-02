@@ -5,18 +5,6 @@
 
     public abstract class Mobile : Product, IProduct, IMobiles
     {
-        //public Enumerations.MobileBrand Brand
-        //{
-        //    get
-        //    {
-        //        throw new System.NotImplementedException();
-        //    }
-        //    set
-        //    {
-        //        throw new System.NotImplementedException();
-        //    }
-        //}
-
         private string processor;
         private double displaySize;
         private double camInMPix;
@@ -115,9 +103,5 @@
                 this.rom = value;
             }
         }
-
-        //public abstract void Save();
-
-        //public abstract void Load();
     }
 }

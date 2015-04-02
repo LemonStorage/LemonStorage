@@ -5,39 +5,47 @@
 
     public class LaptopBag : Accessories, IProduct
     {
-        private string material;
-        private double compatibility; //Example: for laptop 15 inches
+        private const double MinCapacity = 7;
 
-         public LaptopBag(int price, string brand, string model, string color, string type, string material, double compatibility)
-            : base(price, brand, model, color, type)
+        private double maximumCapacityInInches; //Example: for laptop 15.6 inches
+        private string wearingStyle; //backpack, bag
+
+        public LaptopBag(int price, string brand, string model, string color, string material, double maximumCapacityInInches, string wearingStyle)
+            : base(price, brand, model, color, material)
         {
-            this.Material = material;
-            this.Compatibility = compatibility;
+            this.MaximumCapacityInInches = maximumCapacityInInches;
+            this.WearingStyle = wearingStyle;
         }
-
-         public string Material
+         
+         public double MaximumCapacityInInches
          {
-             get { return this.material; }
+             get 
+             {
+                 return this.maximumCapacityInInches; 
+             }
              set
              {
-                 if (string.IsNullOrEmpty(this.material))
+                 if (value < MinCapacity)
                  {
-                     throw new ArgumentNullException("Material can not be empty");
+                     throw new ArgumentNullException(string.Format("Capacity can not be less than {0}!", MinCapacity));
                  }
-                 this.material = value;
+                 this.maximumCapacityInInches = value;
              }
          }
 
-         public double Compatibility
+         public string WearingStyle
          {
-             get { return this.compatibility; }
+             get
+             {
+                 return this.wearingStyle;
+             }
              set
              {
-                 if (value<0)
+                 if (string.IsNullOrEmpty(value))
                  {
-                     throw new ArgumentNullException("Compatibility can not be negative number!");
+                     throw new ArgumentNullException("Wearing style can not be empty!");
                  }
-                 this.compatibility = value;
+                 this.wearingStyle = value;
              }
          }
     }

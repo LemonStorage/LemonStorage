@@ -1,19 +1,27 @@
 ﻿namespace LemonStorage.Classes.Computers
 {
     using LemonStorage.Interfaces;
+    using LemonStorage.Classes.ExceptionClasses;
     using System;
 
     public abstract class Computer : Product, IProduct, IComputer, ISavable
     {
-        private string processor;
-        private uint ram;
-        private uint hddSize;
-        private string videoCardModel;
-        private uint videoCardMemory;
-        private string soundCard;
-        private int cores;
+        private const uint MinRam = 512;
+        private const uint MinHDDSize = 128;
+        private const uint MinVideoMemory = 64;
+        private const byte MinNumOfCores = 1;
+        private const byte MaxNumOfCores = 16;
 
-        public Computer(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, int cores)
+
+        private string processor;
+        private uint ramInMB;
+        private uint hddSizeInGB;
+        private string videoCardModel;
+        private uint videoCardMemoryInMB;
+        private string soundCard;
+        private byte cores;
+
+        public Computer(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, byte cores)
             :base(price, brand, model, color)
         {
             this.Processor = processor;
@@ -26,11 +34,7 @@
         public string Processor
         {
             get
-            {
-                if (string.IsNullOrEmpty(this.processor))
-                {
-                    throw new ArgumentException("The processor can not be empty");
-                }
+            {                
                 return this.processor;
             }
             set
@@ -46,51 +50,47 @@
         public uint Ram
         {
             get
-            {
-                if (this.ram <= 0)
-                {
-                    throw new ArgumentException("The ram can not be less or equal to zero");
-                }
-                return this.ram;
+            {                
+                return this.ramInMB;
             }
             set
             {
-                if (value <= 0)
+                if (value <= MinRam)
                 {
-                    throw new ArgumentException("The ram can not be less or equal to zero");
+                    throw new ArgumentException(string.Format("The ram can not be less than {0}", MinRam));
                 }
-                this.ram = value;
+                if (value % 2 != 0)
+                {
+                    throw new ArgumentException("RAM memory size must be devidible by 2");
+                }
+                this.ramInMB = value;
             }
         }
 
         public uint HDDSize
         {
             get
-            {
-                if (this.hddSize <= 0)
-                {
-                    throw new ArgumentException("The HDD Size can not be less or equal to zero");
-                }
-                return this.hddSize;
+            {               
+                return this.hddSizeInGB;
             }
             set
             {
-                if (value <= 0)
+                if (value <= MinHDDSize)
                 {
-                    throw new ArgumentException("The HDD Size can not be less or equal to zero");
+                    throw new ArgumentException(string.Format("The HDD Size can not be less than {0}", MinHDDSize));
                 }
-                this.hddSize = value;
+                if (value % 2 != 0)
+                {
+                    throw new ArgumentException("Memory size must devidible by 2");
+                }
+                this.hddSizeInGB = value;
             }
         }
 
         public string VideoCardModel
         {
             get
-            {
-                if (string.IsNullOrEmpty(this.videoCardModel))
-                {
-                    throw new ArgumentException("The video card model can not be empty");
-                }
+            {                
                 return this.videoCardModel;
             }
             set
@@ -106,31 +106,28 @@
         public uint VideocardMemory
         {
             get
-            {
-                if (this.videoCardMemory <= 0)
-                {
-                    throw new ArgumentException("The video card memory can not be less or equal to zero");
-                }
-                return this.videoCardMemory;
+            {               
+                return this.videoCardMemoryInMB;
             }
             set
             {
-                if (value <= 0)
+                if (value <= MinVideoMemory)
                 {
-                    throw new ArgumentException("The video card memory can not be less or equal to zero");
+                    throw new ArgumentException(string.Format
+                        ("The video card memory can not be less than {0}", MinVideoMemory));
                 }
-                this.videoCardMemory = value;
+                if (value % 2 != 0)
+                {
+                    throw new ArgumentException("Video memory size must be devidible by 2");
+                }
+                this.videoCardMemoryInMB = value;
             }
         }
 
         public string SoundCard
         {
             get
-            {
-                if (string.IsNullOrEmpty(this.soundCard))
-                {
-                    throw new ArgumentException("The sound card can not be empty");
-                }
+            {               
                 return this.soundCard;
             }
             set
@@ -143,28 +140,21 @@
             }
         }
 
-        public int Cores 
+        public byte Cores 
         { 
             get
-            {
-                if (this.cores <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Number of cores must over 0");
-                }
+            {                
                 return this.cores;
             }
             set
             {
-                if (value <= 0)
+                if (value < MinNumOfCores || value > MaxNumOfCores )
                 {
-                    throw new ArgumentOutOfRangeException("Number of cores must over 0");
+                    throw new InvalidRangeException<byte>(string.Format
+                        ("Number of cores \"{0}\" are out of range", value), MinNumOfCores, MaxNumOfCores);
                 }
                 this.cores = value;
             }
         }
-
-        //public abstract void Save();
-
-        //public abstract void Load();
     }
 }
