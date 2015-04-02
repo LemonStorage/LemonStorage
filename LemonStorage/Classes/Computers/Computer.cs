@@ -3,7 +3,7 @@
     using LemonStorage.Interfaces;
     using System;
 
-    public abstract class Computer : Product, IProduct, IComputer
+    public abstract class Computer : Product, IProduct, IComputer, ISavable
     {
         private string processor;
         private uint ram;

@@ -49,6 +49,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,11 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Data\LemonStorageDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LemonStorageDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Classes\Accessories\Handsfree.cs" />
     <Compile Include="Classes\Accessories\Charger.cs" />
     <Compile Include="Classes\Accessories\Accessories.cs" />
@@ -84,14 +81,45 @@
     <Compile Include="Classes\Mobiles\Mobile.cs" />
     <Compile Include="Enumerations\MobileBrand.cs" />
     <Compile Include="Enumerations\PeripheralBrands.cs" />
+    <Compile Include="Enumerations\Products.cs" />
+    <Compile Include="GUI\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FirstPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FirstPage.Designer.cs">
+      <DependentUpon>FirstPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchProducts.Designer.cs">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ToDoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ToDoForm.Designer.cs">
+      <DependentUpon>ToDoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IAccessories.cs" />
     <Compile Include="Interfaces\IComputer.cs" />
     <Compile Include="Interfaces\IMobiles.cs" />
     <Compile Include="Interfaces\IPeripheralDevices.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\ISavable.cs" />
     <Compile Include="LemonStorageMain.cs" />
     <Compile Include="Classes\Accessories\MemoryCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -100,32 +128,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\LemonStorageDataSet.xsc">
-      <DependentUpon>LemonStorageDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="App_Data\LemonStorageDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LemonStorageDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="App_Data\LemonStorageDataSet.xss">
-      <DependentUpon>LemonStorageDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Data\LemonStorage.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\LemonStorage_log.ldf">
-      <DependentUpon>LemonStorage.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -143,6 +150,28 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FirstPage.resx">
+      <DependentUpon>FirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchProducts.resx">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ToDoForm.resx">
+      <DependentUpon>ToDoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Resources\images.png" />
+    <Content Include="Properties\Resources\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
