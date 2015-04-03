@@ -48,11 +48,11 @@ namespace LemonStorage.GUI
                 comboBox2.DataSource = Articuls2;
                 comboBox2.SelectedIndex = 0;
             }
-            if ((string)comboBox1.SelectedItem == "Peripherl Device")
+            if ((string)comboBox1.SelectedItem == "Peripheral Device")
             {
                 string[] Articuls2 = { "Monitor", "Printer", "Scener" };
                 comboBox2.DataSource = Articuls2;
-                comboBox2.SelectedIndex = -1;
+                comboBox2.SelectedIndex = 0;
             }
         }
 
@@ -61,10 +61,7 @@ namespace LemonStorage.GUI
             if ((string)comboBox2.SelectedItem == "Laptop")
             {
                 UnvisibleFields();
-                Price.Visible = true; Pricelabel.Visible = true;
-                Brand.Visible = true; Brandlabel.Visible = true;
-                Model.Visible = true; Modellabel.Visible = true;
-                Color.Visible = true; Colorlabel.Visible = true;
+                VisibleFields();
                 Processor.Visible = true; Processorlabel.Visible = true;
                 RAM.Visible = true; RAMlabel.Visible = true;
                 HDD.Visible = true; HDDlabel.Visible = true;
@@ -80,10 +77,7 @@ namespace LemonStorage.GUI
             if ((string)comboBox2.SelectedItem == "Desktop Computer")
             {
                 UnvisibleFields();
-                Price.Visible = true; Brandlabel.Visible = true;
-                Brand.Visible = true; Modellabel.Visible = true;
-                Model.Visible = true; Pricelabel.Visible = true;
-                Color.Visible = true; Colorlabel.Visible = true;
+                VisibleFields();
                 Processor.Visible = true; Processorlabel.Visible = true;
                 RAM.Visible = true; HDDlabel.Visible = true;
                 HDD.Visible = true; RAMlabel.Visible = true;
@@ -96,10 +90,7 @@ namespace LemonStorage.GUI
             if ((string)comboBox2.SelectedItem == "Mobile Phone")
             {
                 UnvisibleFields();
-                Price.Visible = true; Pricelabel.Visible = true;
-                Brand.Visible = true; Brandlabel.Visible = true;
-                Model.Visible = true; Modellabel.Visible = true;
-                Color.Visible = true; Colorlabel.Visible = true;
+                VisibleFields();
                 Processor.Visible = true; Processorlabel.Visible = true;
                 RAM.Visible = true; RAMlabel.Visible = true;
                 Rom.Visible = true; ROMlabel.Visible = true;
@@ -147,6 +138,14 @@ namespace LemonStorage.GUI
             }
         }
 
+
+        private void VisibleFields()
+        {
+            Price.Visible = true; Pricelabel.Visible = true;
+            Brand.Visible = true; Brandlabel.Visible = true;
+            Model.Visible = true; Modellabel.Visible = true;
+            Color.Visible = true; Colorlabel.Visible = true;
+        }
         private void UnvisibleFields()
         {
             Rom.Visible = false; ROMlabel.Visible = false;

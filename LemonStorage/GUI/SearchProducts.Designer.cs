@@ -47,7 +47,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 43);
+            this.comboBox1.Location = new System.Drawing.Point(12, 62);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
@@ -55,7 +55,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 26);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(41, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
@@ -63,14 +65,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 44);
+            this.textBox1.Location = new System.Drawing.Point(152, 62);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(258, 41);
+            this.button1.Location = new System.Drawing.Point(258, 61);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 20);
             this.button1.TabIndex = 3;
@@ -80,7 +82,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(372, 39);
+            this.button2.Location = new System.Drawing.Point(366, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -91,7 +93,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 70);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(757, 201);
             this.dataGridView1.TabIndex = 5;
@@ -132,7 +134,7 @@
             // 
             // Increase
             // 
-            this.Increase.Location = new System.Drawing.Point(315, 287);
+            this.Increase.Location = new System.Drawing.Point(352, 305);
             this.Increase.Name = "Increase";
             this.Increase.Size = new System.Drawing.Size(109, 47);
             this.Increase.TabIndex = 7;
@@ -145,7 +147,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
-            this.ClientSize = new System.Drawing.Size(781, 346);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(781, 370);
             this.Controls.Add(this.Increase);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGridView1);

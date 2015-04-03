@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,6 +91,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(85, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
@@ -99,6 +102,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(264, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 13);
@@ -108,6 +113,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(193, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
@@ -157,6 +164,8 @@
             // Modellabel
             // 
             this.Modellabel.AutoSize = true;
+            this.Modellabel.BackColor = System.Drawing.Color.Transparent;
+            this.Modellabel.ForeColor = System.Drawing.Color.Yellow;
             this.Modellabel.Location = new System.Drawing.Point(12, 123);
             this.Modellabel.Name = "Modellabel";
             this.Modellabel.Size = new System.Drawing.Size(36, 13);
@@ -167,6 +176,8 @@
             // Pricelabel
             // 
             this.Pricelabel.AutoSize = true;
+            this.Pricelabel.BackColor = System.Drawing.Color.Transparent;
+            this.Pricelabel.ForeColor = System.Drawing.Color.Yellow;
             this.Pricelabel.Location = new System.Drawing.Point(12, 152);
             this.Pricelabel.Name = "Pricelabel";
             this.Pricelabel.Size = new System.Drawing.Size(31, 13);
@@ -177,6 +188,8 @@
             // Processorlabel
             // 
             this.Processorlabel.AutoSize = true;
+            this.Processorlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Processorlabel.ForeColor = System.Drawing.Color.Yellow;
             this.Processorlabel.Location = new System.Drawing.Point(12, 242);
             this.Processorlabel.Name = "Processorlabel";
             this.Processorlabel.Size = new System.Drawing.Size(54, 13);
@@ -187,6 +200,8 @@
             // Colorlabel
             // 
             this.Colorlabel.AutoSize = true;
+            this.Colorlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Colorlabel.ForeColor = System.Drawing.Color.Yellow;
             this.Colorlabel.Location = new System.Drawing.Point(15, 178);
             this.Colorlabel.Name = "Colorlabel";
             this.Colorlabel.Size = new System.Drawing.Size(31, 13);
@@ -197,6 +212,8 @@
             // RAMlabel
             // 
             this.RAMlabel.AutoSize = true;
+            this.RAMlabel.BackColor = System.Drawing.Color.Transparent;
+            this.RAMlabel.ForeColor = System.Drawing.Color.Yellow;
             this.RAMlabel.Location = new System.Drawing.Point(230, 242);
             this.RAMlabel.Name = "RAMlabel";
             this.RAMlabel.Size = new System.Drawing.Size(31, 13);
@@ -207,6 +224,8 @@
             // Brandlabel
             // 
             this.Brandlabel.AutoSize = true;
+            this.Brandlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Brandlabel.ForeColor = System.Drawing.Color.Yellow;
             this.Brandlabel.Location = new System.Drawing.Point(11, 95);
             this.Brandlabel.Name = "Brandlabel";
             this.Brandlabel.Size = new System.Drawing.Size(35, 13);
@@ -224,18 +243,22 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(292, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 19;
             this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // HDDlabel
             // 
             this.HDDlabel.AutoSize = true;
+            this.HDDlabel.BackColor = System.Drawing.Color.Transparent;
+            this.HDDlabel.ForeColor = System.Drawing.Color.Yellow;
             this.HDDlabel.Location = new System.Drawing.Point(12, 271);
             this.HDDlabel.Name = "HDDlabel";
             this.HDDlabel.Size = new System.Drawing.Size(31, 13);
@@ -262,6 +285,8 @@
             // Videocardlabel
             // 
             this.Videocardlabel.AutoSize = true;
+            this.Videocardlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Videocardlabel.ForeColor = System.Drawing.Color.Yellow;
             this.Videocardlabel.Location = new System.Drawing.Point(203, 270);
             this.Videocardlabel.Name = "Videocardlabel";
             this.Videocardlabel.Size = new System.Drawing.Size(58, 13);
@@ -272,6 +297,8 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.ForeColor = System.Drawing.Color.Yellow;
             this.label13.Location = new System.Drawing.Point(203, 208);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(39, 13);
@@ -282,6 +309,8 @@
             // Soundlabel
             // 
             this.Soundlabel.AutoSize = true;
+            this.Soundlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Soundlabel.ForeColor = System.Drawing.Color.Yellow;
             this.Soundlabel.Location = new System.Drawing.Point(11, 300);
             this.Soundlabel.Name = "Soundlabel";
             this.Soundlabel.Size = new System.Drawing.Size(62, 13);
@@ -300,6 +329,8 @@
             // Corelabel
             // 
             this.Corelabel.AutoSize = true;
+            this.Corelabel.BackColor = System.Drawing.Color.Transparent;
+            this.Corelabel.ForeColor = System.Drawing.Color.Yellow;
             this.Corelabel.Location = new System.Drawing.Point(225, 297);
             this.Corelabel.Name = "Corelabel";
             this.Corelabel.Size = new System.Drawing.Size(34, 13);
@@ -318,6 +349,8 @@
             // Batterylabel
             // 
             this.Batterylabel.AutoSize = true;
+            this.Batterylabel.BackColor = System.Drawing.Color.Transparent;
+            this.Batterylabel.ForeColor = System.Drawing.Color.Yellow;
             this.Batterylabel.Location = new System.Drawing.Point(12, 327);
             this.Batterylabel.Name = "Batterylabel";
             this.Batterylabel.Size = new System.Drawing.Size(81, 13);
@@ -328,6 +361,8 @@
             // Weightlabel
             // 
             this.Weightlabel.AutoSize = true;
+            this.Weightlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Weightlabel.ForeColor = System.Drawing.Color.Yellow;
             this.Weightlabel.Location = new System.Drawing.Point(220, 323);
             this.Weightlabel.Name = "Weightlabel";
             this.Weightlabel.Size = new System.Drawing.Size(41, 13);
@@ -338,6 +373,8 @@
             // Sizelabel
             // 
             this.Sizelabel.AutoSize = true;
+            this.Sizelabel.BackColor = System.Drawing.Color.Transparent;
+            this.Sizelabel.ForeColor = System.Drawing.Color.Yellow;
             this.Sizelabel.Location = new System.Drawing.Point(12, 352);
             this.Sizelabel.Name = "Sizelabel";
             this.Sizelabel.Size = new System.Drawing.Size(27, 13);
@@ -372,6 +409,8 @@
             // ROMlabel
             // 
             this.ROMlabel.AutoSize = true;
+            this.ROMlabel.BackColor = System.Drawing.Color.Transparent;
+            this.ROMlabel.ForeColor = System.Drawing.Color.Yellow;
             this.ROMlabel.Location = new System.Drawing.Point(388, 242);
             this.ROMlabel.Name = "ROMlabel";
             this.ROMlabel.Size = new System.Drawing.Size(32, 13);
@@ -388,6 +427,8 @@
             // Displaylabel
             // 
             this.Displaylabel.AutoSize = true;
+            this.Displaylabel.BackColor = System.Drawing.Color.Transparent;
+            this.Displaylabel.ForeColor = System.Drawing.Color.Yellow;
             this.Displaylabel.Location = new System.Drawing.Point(385, 270);
             this.Displaylabel.Name = "Displaylabel";
             this.Displaylabel.Size = new System.Drawing.Size(41, 13);
@@ -397,6 +438,8 @@
             // Cameralabel
             // 
             this.Cameralabel.AutoSize = true;
+            this.Cameralabel.BackColor = System.Drawing.Color.Transparent;
+            this.Cameralabel.ForeColor = System.Drawing.Color.Yellow;
             this.Cameralabel.Location = new System.Drawing.Point(385, 297);
             this.Cameralabel.Name = "Cameralabel";
             this.Cameralabel.Size = new System.Drawing.Size(43, 13);
@@ -421,8 +464,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Yellow;
-            this.ClientSize = new System.Drawing.Size(548, 382);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(802, 423);
             this.Controls.Add(this.Camera);
             this.Controls.Add(this.Display);
             this.Controls.Add(this.Cameralabel);
