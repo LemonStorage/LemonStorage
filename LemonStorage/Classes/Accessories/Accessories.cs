@@ -3,7 +3,7 @@
     using LemonStorage.Interfaces;
     using System;
 
-    public abstract class Accessories : Product, IProduct
+    public abstract class Accessories : Product, IAccessories, IProduct,ISavable
     {
         private string material; // Plastic , Metal, Aluminium ...
 

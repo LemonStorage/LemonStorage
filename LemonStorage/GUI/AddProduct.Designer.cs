@@ -214,7 +214,7 @@
             this.RAMlabel.AutoSize = true;
             this.RAMlabel.BackColor = System.Drawing.Color.Transparent;
             this.RAMlabel.ForeColor = System.Drawing.Color.Yellow;
-            this.RAMlabel.Location = new System.Drawing.Point(230, 242);
+            this.RAMlabel.Location = new System.Drawing.Point(228, 242);
             this.RAMlabel.Name = "RAMlabel";
             this.RAMlabel.Size = new System.Drawing.Size(31, 13);
             this.RAMlabel.TabIndex = 17;
@@ -235,7 +235,7 @@
             // 
             // RAM
             // 
-            this.RAM.Location = new System.Drawing.Point(267, 235);
+            this.RAM.Location = new System.Drawing.Point(267, 239);
             this.RAM.Name = "RAM";
             this.RAM.Size = new System.Drawing.Size(100, 20);
             this.RAM.TabIndex = 18;
@@ -276,7 +276,7 @@
             // 
             // VideoCard
             // 
-            this.VideoCard.Location = new System.Drawing.Point(267, 264);
+            this.VideoCard.Location = new System.Drawing.Point(93, 323);
             this.VideoCard.Name = "VideoCard";
             this.VideoCard.Size = new System.Drawing.Size(100, 20);
             this.VideoCard.TabIndex = 22;
@@ -287,12 +287,13 @@
             this.Videocardlabel.AutoSize = true;
             this.Videocardlabel.BackColor = System.Drawing.Color.Transparent;
             this.Videocardlabel.ForeColor = System.Drawing.Color.Yellow;
-            this.Videocardlabel.Location = new System.Drawing.Point(203, 270);
+            this.Videocardlabel.Location = new System.Drawing.Point(12, 330);
             this.Videocardlabel.Name = "Videocardlabel";
             this.Videocardlabel.Size = new System.Drawing.Size(58, 13);
             this.Videocardlabel.TabIndex = 23;
             this.Videocardlabel.Text = "Video card";
             this.Videocardlabel.Visible = false;
+            this.Videocardlabel.Click += new System.EventHandler(this.Videocardlabel_Click);
             // 
             // label13
             // 
@@ -311,16 +312,17 @@
             this.Soundlabel.AutoSize = true;
             this.Soundlabel.BackColor = System.Drawing.Color.Transparent;
             this.Soundlabel.ForeColor = System.Drawing.Color.Yellow;
-            this.Soundlabel.Location = new System.Drawing.Point(11, 300);
+            this.Soundlabel.Location = new System.Drawing.Point(11, 301);
             this.Soundlabel.Name = "Soundlabel";
             this.Soundlabel.Size = new System.Drawing.Size(62, 13);
             this.Soundlabel.TabIndex = 25;
             this.Soundlabel.Text = "Sound card";
             this.Soundlabel.Visible = false;
+            this.Soundlabel.Click += new System.EventHandler(this.Soundlabel_Click);
             // 
             // SoundCard
             // 
-            this.SoundCard.Location = new System.Drawing.Point(93, 294);
+            this.SoundCard.Location = new System.Drawing.Point(93, 295);
             this.SoundCard.Name = "SoundCard";
             this.SoundCard.Size = new System.Drawing.Size(100, 20);
             this.SoundCard.TabIndex = 26;
@@ -331,7 +333,7 @@
             this.Corelabel.AutoSize = true;
             this.Corelabel.BackColor = System.Drawing.Color.Transparent;
             this.Corelabel.ForeColor = System.Drawing.Color.Yellow;
-            this.Corelabel.Location = new System.Drawing.Point(225, 297);
+            this.Corelabel.Location = new System.Drawing.Point(223, 271);
             this.Corelabel.Name = "Corelabel";
             this.Corelabel.Size = new System.Drawing.Size(34, 13);
             this.Corelabel.TabIndex = 27;
@@ -340,7 +342,7 @@
             // 
             // Core
             // 
-            this.Core.Location = new System.Drawing.Point(267, 290);
+            this.Core.Location = new System.Drawing.Point(267, 267);
             this.Core.Name = "Core";
             this.Core.Size = new System.Drawing.Size(100, 20);
             this.Core.TabIndex = 28;
@@ -351,7 +353,7 @@
             this.Batterylabel.AutoSize = true;
             this.Batterylabel.BackColor = System.Drawing.Color.Transparent;
             this.Batterylabel.ForeColor = System.Drawing.Color.Yellow;
-            this.Batterylabel.Location = new System.Drawing.Point(12, 327);
+            this.Batterylabel.Location = new System.Drawing.Point(11, 359);
             this.Batterylabel.Name = "Batterylabel";
             this.Batterylabel.Size = new System.Drawing.Size(81, 13);
             this.Batterylabel.TabIndex = 29;
@@ -363,7 +365,7 @@
             this.Weightlabel.AutoSize = true;
             this.Weightlabel.BackColor = System.Drawing.Color.Transparent;
             this.Weightlabel.ForeColor = System.Drawing.Color.Yellow;
-            this.Weightlabel.Location = new System.Drawing.Point(220, 323);
+            this.Weightlabel.Location = new System.Drawing.Point(220, 330);
             this.Weightlabel.Name = "Weightlabel";
             this.Weightlabel.Size = new System.Drawing.Size(41, 13);
             this.Weightlabel.TabIndex = 30;
@@ -375,7 +377,7 @@
             this.Sizelabel.AutoSize = true;
             this.Sizelabel.BackColor = System.Drawing.Color.Transparent;
             this.Sizelabel.ForeColor = System.Drawing.Color.Yellow;
-            this.Sizelabel.Location = new System.Drawing.Point(12, 352);
+            this.Sizelabel.Location = new System.Drawing.Point(230, 300);
             this.Sizelabel.Name = "Sizelabel";
             this.Sizelabel.Size = new System.Drawing.Size(27, 13);
             this.Sizelabel.TabIndex = 31;
@@ -384,7 +386,7 @@
             // 
             // BatteryDuration
             // 
-            this.BatteryDuration.Location = new System.Drawing.Point(93, 320);
+            this.BatteryDuration.Location = new System.Drawing.Point(93, 352);
             this.BatteryDuration.Name = "BatteryDuration";
             this.BatteryDuration.Size = new System.Drawing.Size(100, 20);
             this.BatteryDuration.TabIndex = 32;
@@ -392,7 +394,7 @@
             // 
             // Size
             // 
-            this.Size.Location = new System.Drawing.Point(93, 346);
+            this.Size.Location = new System.Drawing.Point(267, 295);
             this.Size.Name = "Size";
             this.Size.Size = new System.Drawing.Size(100, 20);
             this.Size.TabIndex = 33;
@@ -400,7 +402,7 @@
             // 
             // Weight
             // 
-            this.Weight.Location = new System.Drawing.Point(267, 316);
+            this.Weight.Location = new System.Drawing.Point(267, 323);
             this.Weight.Name = "Weight";
             this.Weight.Size = new System.Drawing.Size(100, 20);
             this.Weight.TabIndex = 34;
@@ -419,7 +421,7 @@
             // 
             // Rom
             // 
-            this.Rom.Location = new System.Drawing.Point(429, 234);
+            this.Rom.Location = new System.Drawing.Point(429, 239);
             this.Rom.Name = "Rom";
             this.Rom.Size = new System.Drawing.Size(100, 20);
             this.Rom.TabIndex = 36;
@@ -448,14 +450,14 @@
             // 
             // Display
             // 
-            this.Display.Location = new System.Drawing.Point(429, 263);
+            this.Display.Location = new System.Drawing.Point(429, 267);
             this.Display.Name = "Display";
             this.Display.Size = new System.Drawing.Size(100, 20);
             this.Display.TabIndex = 39;
             // 
             // Camera
             // 
-            this.Camera.Location = new System.Drawing.Point(429, 293);
+            this.Camera.Location = new System.Drawing.Point(429, 295);
             this.Camera.Name = "Camera";
             this.Camera.Size = new System.Drawing.Size(100, 20);
             this.Camera.TabIndex = 40;

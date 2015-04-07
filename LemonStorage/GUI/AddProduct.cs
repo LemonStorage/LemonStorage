@@ -38,13 +38,13 @@ namespace LemonStorage.GUI
             }
             if ((string)comboBox1.SelectedItem == "Mobile")
             {
-                string[] Articuls2 = { "Mobile Phone", "Smartphone", "Tablet" };
+                string[] Articuls2 = { "Mobile Phone", "Smart Phone", "Tablet" };
                 comboBox2.DataSource = Articuls2;
                 comboBox2.SelectedIndex = 0;
             }
             if ((string)comboBox1.SelectedItem == "Accessory")
             {
-                string[] Articuls2 = { "Charger", "Handsfree", "Big Headset", "In Ear Headset", "Laptop Bag", "Memory Card", "Phone Case", "Tablet Case" };
+                string[] Articuls2 = { "Charger", "Handsfree", "Laptop Bag", "Memory Card", "Phone Case", "Tablet Case" };
                 comboBox2.DataSource = Articuls2;
                 comboBox2.SelectedIndex = 0;
             }
@@ -87,7 +87,7 @@ namespace LemonStorage.GUI
                 label13.Visible = true;
                 button1.Visible = true;
             }
-            if ((string)comboBox2.SelectedItem == "Mobile Phone")
+            if ((string)comboBox2.SelectedItem == "Mobile Phone" || (string)comboBox2.SelectedItem == "Smart Phone" || (string)comboBox2.SelectedItem == "Tablet")
             {
                 UnvisibleFields();
                 VisibleFields();
@@ -125,9 +125,28 @@ namespace LemonStorage.GUI
                 }
                 if ((string)comboBox2.SelectedItem == "Mobile Phone")
                 {
-                    Mobile mobile= new MobilePhone(decimal.Parse(Price.Text), Brand.Text, Model.Text, Color.Text,Processor.Text,double.Parse(Display.Text),
-                        double.Parse(Camera.Text),uint.Parse(RAM.Text), uint.Parse(Rom.Text));
-                    mobile.SaveToSQL();
+                    Mobile mobile = new MobilePhone(decimal.Parse(Price.Text), Brand.Text, Model.Text, Color.Text, Processor.Text, double.Parse(Display.Text),
+                        double.Parse(Camera.Text), uint.Parse(RAM.Text), uint.Parse(Rom.Text));
+                   var mb = (MobilePhone)mobile;
+                    mb.SaveToSQL();
+                    FieldsClear();
+                    this.Close();
+                }
+                if ((string)comboBox2.SelectedItem == "Smart Phone")
+                {
+                    Mobile smart = new SmartPhone(decimal.Parse(Price.Text), Brand.Text, Model.Text, Color.Text, Processor.Text, double.Parse(Display.Text),
+                        double.Parse(Camera.Text), uint.Parse(RAM.Text), uint.Parse(Rom.Text));
+                    var sm = (SmartPhone)smart;
+                    sm.SaveToSQL();
+                    FieldsClear();
+                    this.Close();
+                }
+                if ((string)comboBox2.SelectedItem == "Tablet")
+                {
+                    Mobile tablet = new Tablet(decimal.Parse(Price.Text), Brand.Text, Model.Text, Color.Text, Processor.Text, double.Parse(Display.Text),
+                        double.Parse(Camera.Text), uint.Parse(RAM.Text), uint.Parse(Rom.Text));
+                    Tablet tb = tablet as Tablet;
+                    tb.SaveToSQL();
                     FieldsClear();
                     this.Close();
                 }
@@ -173,6 +192,16 @@ namespace LemonStorage.GUI
             Price.Clear(); Brand.Clear(); Model.Clear(); Color.Clear(); Processor.Clear();
             RAM.Clear(); HDD.Clear(); VideoCard.Clear(); SoundCard.Clear(); BatteryDuration.Clear();
             Weight.Clear(); Size.Clear(); Core.Clear();
+        }
+
+        private void Videocardlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Soundlabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

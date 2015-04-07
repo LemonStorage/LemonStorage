@@ -68,9 +68,6 @@
     <Compile Include="Classes\Computers\DesktopPC.cs" />
     <Compile Include="Classes\Computers\Laptop.cs" />
     <Compile Include="Classes\ExceptionClasses\InvalidRangeException.cs" />
-    <Compile Include="Classes\Headphones\BigHeadset.cs" />
-    <Compile Include="Classes\Headphones\Headphone.cs" />
-    <Compile Include="Classes\Headphones\InEarHeadset.cs" />
     <Compile Include="Classes\Mobiles\MobilePhone.cs" />
     <Compile Include="Classes\PeripheralDevices\PeripheralDevice.cs" />
     <Compile Include="Classes\Mobiles\Tablet.cs" />
@@ -80,6 +77,7 @@
     <Compile Include="Classes\PeripheralDevices\Scener.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Mobiles\Mobile.cs" />
+    <Compile Include="Enumerations\Color.cs" />
     <Compile Include="Enumerations\MobileBrand.cs" />
     <Compile Include="Enumerations\PeripheralBrands.cs" />
     <Compile Include="Enumerations\Products.cs" />

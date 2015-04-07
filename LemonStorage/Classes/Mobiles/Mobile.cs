@@ -3,7 +3,7 @@
     using LemonStorage.Interfaces;
     using System;
 
-    public abstract class Mobile : Product, IProduct, IMobiles
+    public abstract class Mobile : Product, IMobiles, IProduct, ISavable
     {
         private string processor;
         private double displaySize;

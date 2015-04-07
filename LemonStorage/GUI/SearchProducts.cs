@@ -13,13 +13,6 @@ namespace LemonStorage.GUI
 {
     public partial class SearchProducts : Form
     {
-        //public static SqlConnection CreateConnection()
-        //{
-        //    SqlConnection conn = new SqlConnection();
-        //    conn.ConnectionString = "Data Source=User-PC;Initial Catalog=LemonStorage;Integrated Security=True";
-        //    return conn;
-        //}
-
         public SearchProducts()
         {
             InitializeComponent();
@@ -27,6 +20,7 @@ namespace LemonStorage.GUI
 
         private void SearchProducts_Load(object sender, EventArgs e)
         {
+            Increase.Visible = false;
             string[] Articuls = { "Brand", "Model", "Price" };
             comboBox1.DataSource = Articuls;
             comboBox1.SelectedIndex = -1;
@@ -82,6 +76,7 @@ namespace LemonStorage.GUI
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
+            Increase.Visible = true;
             SqlConnection conn = LemonStorage.LemonStorageMain.CreateConnection();
             using (conn)
             {
@@ -155,11 +150,13 @@ namespace LemonStorage.GUI
                 else 
                 {
                 }
+                Increase.Visible = false;
             }
         }
 
         private void toolStripLabel2_Click(object sender, EventArgs e)
         {
+            Increase.Visible = true;
             SqlConnection conn = LemonStorage.LemonStorageMain.CreateConnection();
             using (conn)
             {

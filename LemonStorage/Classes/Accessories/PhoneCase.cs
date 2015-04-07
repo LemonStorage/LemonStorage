@@ -3,7 +3,7 @@
     using LemonStorage.Interfaces;
     using System;
 
-    public class PhoneCase : Accessories, IProduct
+    public class PhoneCase : Accessories,IAccessories, IProduct, ISavable
     {
         private string compatibility;//With which phone is it compatible
 

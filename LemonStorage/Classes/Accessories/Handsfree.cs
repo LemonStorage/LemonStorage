@@ -3,7 +3,7 @@
     using LemonStorage.Interfaces;
     using System;
 
-    class Handsfree : Accessories, IProduct
+    class Handsfree : Accessories,IAccessories, IProduct, ISavable
     {
         private const int MinBatteryDuration = 5;
         private const int MinRange = 1;

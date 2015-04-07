@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,8 +39,19 @@ namespace LemonStorage
                 {
                 }
             }
-            ToDoForm f = new ToDoForm();
-            f.ShowDialog();
+           SqlConnection conn = LemonStorage.LemonStorageMain.CreateConnection();
+           using (conn)
+           {
+               string sql2 = "SELECT * FROM Products WHERE Quantity <= " + 10;
+               SqlDataAdapter connect2 = new SqlDataAdapter(sql2, conn);
+               DataSet ds2 = new DataSet();
+               connect2.Fill(ds2);
+               if (ds2.Tables[0].Rows.Count!=0)
+               {
+                   ToDoForm f = new ToDoForm();
+                   f.ShowDialog();
+               }
+           }
         }
 
         private void button2_Click(object sender, EventArgs e)

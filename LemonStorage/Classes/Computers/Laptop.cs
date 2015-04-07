@@ -5,7 +5,7 @@
     using System.Data;
     using System.Data.SqlClient;
 
-    public class Laptop : Computer, IProduct, IComputer, ISavable
+    public class Laptop : Computer, IComputer, IProduct, ISavable
     {
         private int batteryDuration;
         private double weight;
@@ -105,9 +105,9 @@
                 Color.Value = this.Color;
                 cmnd.Parameters.Add(Color);
                 SqlParameter Details = new SqlParameter("@Details", SqlDbType.NVarChar);
-                Details.Value = "Processor:"+this.Processor+" Ram:"+this.Ram+" HDD:"+this.HDDSize+" Video card:"+
-                    this.VideoCardModel+" Sound card:"+this.SoundCard+" Cores:"+this.Cores+" Battery:"+this.BatteryDuration
-                    +" Size:"+this.Size+" Weight:"+this.Weight;
+                Details.Value = "Processor:" + this.Processor + " Ram:" + this.Ram + " HDD:" + this.HDDSize + " Video card:" +
+                    this.VideoCardModel + " Sound card:" + this.SoundCard + " Cores:" + this.Cores + " Battery:" + this.BatteryDuration
+                    + " Size:" + this.Size + " Weight:" + this.Weight;
                 cmnd.Parameters.Add(Details);
                 try
                 {

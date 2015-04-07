@@ -3,7 +3,7 @@
     using LemonStorage.Interfaces;
     using System;
 
-    public class LaptopBag : Accessories, IProduct
+    public class LaptopBag : Accessories,IAccessories, IProduct, ISavable
     {
         private const double MinCapacity = 7;
 

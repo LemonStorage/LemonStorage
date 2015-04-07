@@ -40,6 +40,7 @@ namespace LemonStorage.GUI
                 DataSet ds2 = new DataSet();
                 connect2.Fill(ds2);
                 dataGridView1.DataSource = ds2.Tables[0];
+
             }
         }
     }

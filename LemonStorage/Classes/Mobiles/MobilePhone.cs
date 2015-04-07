@@ -5,7 +5,7 @@
     using System.Data;
     using System.Data.SqlClient;
 
-    class MobilePhone : Mobile, IProduct, IMobiles, ISavable
+    class MobilePhone : Mobile, IMobiles, IProduct, ISavable
     {
         public MobilePhone(decimal price, string brand, string model, string color, string processor,
                       double displaySize, double camInMPix, uint ram, uint rom)

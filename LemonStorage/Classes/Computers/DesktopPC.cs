@@ -6,7 +6,7 @@
     using System.Data;
     using System.Data.SqlClient;
 
-    public class DesktopPC : Computer, IProduct, IComputer
+    public class DesktopPC : Computer, IComputer, IProduct, ISavable
     {
         public DesktopPC(decimal price, string brand, string model, string color, string processor, uint ram, uint hddSize, string videoCardModel, string soundCard, byte cores)
             : base(price, brand, model, color, processor, ram, hddSize, videoCardModel, soundCard, cores)
@@ -42,8 +42,6 @@
                 SqlParameter Details = new SqlParameter("@Details", SqlDbType.NVarChar);
                 Details.Value = "Processor:" + this.Processor + " Ram:" + this.Ram + " HDD:" + this.HDDSize + " Video card:" +
                     this.VideoCardModel + " Sound card:" + this.SoundCard + " Cores:" + this.Cores;
-                   
-                cmnd.Parameters.Add(Details);
                 try
                 {
                     conn.Open();
@@ -53,6 +51,7 @@
                 {
                     throw new Exception();
                 }
+
             }
         }
 

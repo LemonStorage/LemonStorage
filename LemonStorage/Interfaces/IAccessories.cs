@@ -1,10 +1,11 @@
 ﻿namespace LemonStorage.Interfaces
 {
     using System;
+    using LemonStorage.Enumerations;
 
     public interface IAccessories
     {
-        ConsoleColor Color { get; set; } // ???? Coupling with the console
+        string Color { get; set; } 
         string Material { get; set; }
     }
 }

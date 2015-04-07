@@ -3,7 +3,7 @@
     using LemonStorage.Interfaces;
     using System;
 
-    public class MemoryCard : Accessories, IProduct
+    public class MemoryCard : Accessories,IAccessories, IProduct, ISavable
     {
         private const int MinMemoriSizeInMB = 256;
 
