@@ -83,6 +83,7 @@
     <Compile Include="Enumerations\MobileBrand.cs" />
     <Compile Include="Enumerations\PeripheralBrands.cs" />
     <Compile Include="Enumerations\Products.cs" />
+    <Compile Include="Enumerations\RepositoryType.cs" />
     <Compile Include="GUI\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +113,7 @@
     <Compile Include="Interfaces\IMobiles.cs" />
     <Compile Include="Interfaces\IPeripheralDevices.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\IProductRepository.cs" />
     <Compile Include="Interfaces\ISavable.cs" />
     <Compile Include="LemonStorageMain.cs" />
     <Compile Include="Classes\Accessories\MemoryCard.cs" />
@@ -126,6 +128,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\CSVRepository.cs" />
+    <Compile Include="Repositories\JSONRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\RepositoryFactory.cs" />
+    <Compile Include="Repositories\SQLRepository.cs" />
+    <Compile Include="Repositories\XMLRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

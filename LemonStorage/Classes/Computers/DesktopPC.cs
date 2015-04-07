@@ -15,7 +15,7 @@
         }
         public override void SaveToSQL()
         {
-            SqlConnection conn = LemonStorage.LemonStorageMain.CreateConnection();
+            SqlConnection conn = CreateConnection();
             using (conn)
             {
                 SqlCommand cmnd = new SqlCommand("dbo.AddProduct", conn);
@@ -54,6 +54,11 @@
                     throw new Exception();
                 }
             }
+        }
+
+        private SqlConnection CreateConnection()
+        {
+            throw new NotImplementedException();
         }
     }
 }
