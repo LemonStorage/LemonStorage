@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Accessories\HeadPhone.cs" />
     <Compile Include="Classes\Accessories\Handsfree.cs" />
     <Compile Include="Classes\Accessories\Charger.cs" />
     <Compile Include="Classes\Accessories\Accessories.cs" />
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="LemonStorageDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

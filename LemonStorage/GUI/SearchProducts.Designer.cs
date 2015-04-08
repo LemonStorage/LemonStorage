@@ -147,6 +147,7 @@
             this.toolStripLabel3.Name = "toolStripLabel3";
             this.toolStripLabel3.Size = new System.Drawing.Size(56, 22);
             this.toolStripLabel3.Text = "Delete";
+            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
             // Increase
             // 

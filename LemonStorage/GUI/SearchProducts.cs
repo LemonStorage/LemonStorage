@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -197,6 +196,42 @@ namespace LemonStorage.GUI
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection conn = LemonStorage.LemonStorageMain.CreateConnection();
+            using (conn)
+            {
+                DialogResult result1 = MessageBox.Show("Do you want to delete customer?",
+    "Delete customer",
+    MessageBoxButtons.YesNo);
+                if (result1 == DialogResult.Yes)
+                {
+
+                    SqlCommand cmnd = new SqlCommand("deleteProducts", conn);
+                    cmnd.CommandType = CommandType.StoredProcedure;
+                    cmnd.CommandText = "deleteProducts";
+                    SqlParameter ProductID = new SqlParameter("@ProductID", SqlDbType.Int);
+                    ProductID.Value = dataGridView1.CurrentRow.Cells[0].Value;
+                    cmnd.Parameters.Add(ProductID);
+
+                    try
+                    {
+                        conn.Open();
+                        SqlDataReader dr = cmnd.ExecuteReader();
+                        MessageBox.Show("Customer deleted successfully!");
+
+                    }
+                    catch (SqlException se)
+                    {
+                        MessageBox.Show(se.ToString());
+                    }
+                }
+                else { }
+
+            }
         }
     }
 }

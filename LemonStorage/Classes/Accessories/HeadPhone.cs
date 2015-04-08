@@ -5,27 +5,12 @@
     using System.Data;
     using System.Data.SqlClient;
 
-    class Charger : Accessories, IAccessories, IProduct, ISavable
+    class HeadPhone : Accessories, IAccessories, IProduct, ISavable
     {
-        private bool withUSBPort;
-
-        public Charger(int price, string brand, string model, string color, string material, bool withUSBPort)
+        public HeadPhone(int price, string brand, string model, string color, string material)
             : base(price, brand, model, color, material)
         {
-            this.withUSBPort = withUSBPort;
-            // Types: For car, for computer with usb, normal or powerbank
-        }
 
-        public bool WithUSBPort 
-        { 
-            get
-            {                
-                return this.withUSBPort;
-            }
-            set
-            {
-                this.withUSBPort = value;
-            } 
         }
 
         public override void SaveToSQL()
@@ -37,7 +22,7 @@
                 cmnd.CommandType = CommandType.StoredProcedure;
                 cmnd.CommandText = "AddProduct";
                 SqlParameter SubSetID = new SqlParameter("@SubSetID", SqlDbType.Int);
-                SubSetID.Value = 9;
+                SubSetID.Value = 15;
                 cmnd.Parameters.Add(SubSetID);
                 SqlParameter Brand = new SqlParameter("@Brand", SqlDbType.NVarChar);
                 Brand.Value = this.Brand;
@@ -55,7 +40,7 @@
                 Color.Value = this.Color;
                 cmnd.Parameters.Add(Color);
                 SqlParameter Details = new SqlParameter("@Details", SqlDbType.NVarChar);
-                Details.Value = "Material:" + this.Material + string.Format(" USB Port:{0}", this.WithUSBPort ? "No" : "Yes");
+                Details.Value = "Material:" + this.Material;
                 cmnd.Parameters.Add(Details);
                 try
                 {

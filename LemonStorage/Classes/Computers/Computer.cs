@@ -148,6 +148,7 @@
             }
             set
             {
+
                 if (value < MinNumOfCores || value > MaxNumOfCores )
                 {
                     throw new InvalidRangeException<byte>(string.Format

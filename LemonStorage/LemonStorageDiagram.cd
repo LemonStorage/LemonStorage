@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LemonStorage.Classes.Accessories.Accessories" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Classes\Accessories\Accessories.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Accessories.Charger" Collapsed="true">
+    <Position X="1.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Accessories\Charger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Accessories.Handsfree" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAAAAAGAABAAAAAAAACAAAAAAAAAAAACAAAAQ=</HashCode>
+      <FileName>Classes\Accessories\Handsfree.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Accessories.LaptopBag" Collapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAEAAAABAAEAAAAAAAAgA=</HashCode>
+      <FileName>Classes\Accessories\LaptopBag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Accessories.MemoryCard" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Accessories\MemoryCard.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Accessories.PhoneCase" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Accessories\PhoneCase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Accessories.TabletCase" Collapsed="true">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAgAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Accessories\TabletCase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Computers.Computer" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQACAAAAAAACAAAAQAESgEARAIAAAAAAAAABAAEICg=</HashCode>
+      <FileName>Classes\Computers\Computer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Computers.DesktopPC" Collapsed="true">
+    <Position X="15" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Computers\DesktopPC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Computers.Laptop" Collapsed="true">
+    <Position X="17.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAgAABAIAAAQAAACAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Computers\Laptop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.ExceptionClasses.InvalidRangeException&lt;T&gt;" Collapsed="true">
+    <Position X="36.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAIAEAAAA=</HashCode>
+      <FileName>Classes\ExceptionClasses\InvalidRangeException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.Classes.Mobiles.Mobile" Collapsed="true">
+    <Position X="28.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIBAAACAAAAQAAAAECAAAAAgAAAAAEAAAEAAA=</HashCode>
+      <FileName>Classes\Mobiles\Mobile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Mobiles.MobilePhone" Collapsed="true">
+    <Position X="30.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Mobiles\MobilePhone.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Mobiles.SmartPhone" Collapsed="true">
+    <Position X="26.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Mobiles\SmartPhone.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Mobiles.Tablet" Collapsed="true">
+    <Position X="28.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Mobiles\Tablet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.PeripheralDevices.Monitor" Collapsed="true">
+    <Position X="19.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\PeripheralDevices\Monitor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.PeripheralDevices.PeripheralDevice" Collapsed="true">
+    <Position X="21.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\PeripheralDevices\PeripheralDevice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.PeripheralDevices.Printer" Collapsed="true">
+    <Position X="21.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Classes\PeripheralDevices\Printer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.PeripheralDevices.Scener" Collapsed="true">
+    <Position X="24" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\PeripheralDevices\Scener.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Classes.Product" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEBAAAAAQAAAAAAAAAAAAAAAAAAAACAAAgAgAAJAAA=</HashCode>
+      <FileName>Classes\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.GUI.AddProduct" Collapsed="true">
+    <Position X="33.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAgjEEAAISCgwBARAADgCQASACAIGgcAAEpAgAEFEqg=</HashCode>
+      <FileName>GUI\AddProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.GUI.SearchProducts" Collapsed="true">
+    <Position X="33.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAEBkAgCAAABAQAECAAAACAAg4AAAAEHAAAAAAAAA=</HashCode>
+      <FileName>GUI\SearchProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.GUI.ToDoForm" Collapsed="true">
+    <Position X="36.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAADAAAACAAggAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\ToDoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.FirstPage" Collapsed="true">
+    <Position X="35" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAAAAAAACAAAACAAA4AAAAAHAAAAAAAAA=</HashCode>
+      <FileName>GUI\FirstPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.LemonStorageMain" Collapsed="true">
+    <Position X="33.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>LemonStorageMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.Properties.Resources" Collapsed="true">
+    <Position X="36.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.Properties.Settings" Collapsed="true">
+    <Position X="35" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABEAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.Repositories.CSVRepository" Collapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Repositories\CSVRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Repositories.JSONRepository" Collapsed="true">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Repositories\JSONRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Repositories.Repository" Collapsed="true">
+    <Position X="3.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Repositories\Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Repositories.RepositoryFactory" Collapsed="true">
+    <Position X="35" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\RepositoryFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonStorage.Repositories.SQLRepository" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Repositories\SQLRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LemonStorage.Repositories.XMLRepository" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Repositories\XMLRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="LemonStorage.Classes.Accessories.TabletCaseCharacterics" Collapsed="true">
+    <Position X="33.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Accessories\TabletCaseCharacterics.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="LemonStorage.Interfaces.IAccessories" Collapsed="true">
+    <Position X="33.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Interfaces\IAccessories.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LemonStorage.Interfaces.IComputer" Collapsed="true">
+    <Position X="35" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAAAEACg=</HashCode>
+      <FileName>Interfaces\IComputer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LemonStorage.Interfaces.IMobiles" Collapsed="true">
+    <Position X="36.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAQAAAAAAAAAAAgAAAAAAAAAEAAA=</HashCode>
+      <FileName>Interfaces\IMobiles.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LemonStorage.Interfaces.IPeripheralDevices" Collapsed="true">
+    <Position X="33.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPeripheralDevices.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LemonStorage.Interfaces.IProduct" Collapsed="true">
+    <Position X="35" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAgAgAABAAA=</HashCode>
+      <FileName>Interfaces\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LemonStorage.Interfaces.IProductRepository" Collapsed="true">
+    <Position X="36.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Interfaces\IProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LemonStorage.Interfaces.ISavable" Collapsed="true">
+    <Position X="33.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ISavable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="LemonStorage.Enumerations.Color" Collapsed="true">
+    <Position X="33.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAABAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\Color.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LemonStorage.Enumerations.MobileBrand" Collapsed="true">
+    <Position X="35" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAIABAAAAAAIAAACAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Enumerations\MobileBrand.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LemonStorage.Enumerations.PeripheralBrands" Collapsed="true">
+    <Position X="36.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAIAAAAAAAAAEQAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\PeripheralBrands.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LemonStorage.Enumerations.Products" Collapsed="true">
+    <Position X="33.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAACAAAAAABCAAAAAgAAAAAA=</HashCode>
+      <FileName>Enumerations\Products.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LemonStorage.Enumerations.RepositoryType" Collapsed="true">
+    <Position X="35" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAQAAAAAAAEAA=</HashCode>
+      <FileName>Enumerations\RepositoryType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
