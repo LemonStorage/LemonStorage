@@ -107,9 +107,9 @@
                 SqlCommand cmnd = new SqlCommand("dbo.AddProduct", conn);
                 cmnd.CommandType = CommandType.StoredProcedure;
                 cmnd.CommandText = "AddProduct";
-                SqlParameter SubSetID = new SqlParameter("@SubSetID", SqlDbType.Int);
-                SubSetID.Value = 1;
-                cmnd.Parameters.Add(SubSetID);
+                //SqlParameter SubSetID = new SqlParameter("@SubSetID", SqlDbType.Int);
+                //SubSetID.Value = 1;
+                //cmnd.Parameters.Add(SubSetID);
                 SqlParameter Brand = new SqlParameter("@Brand", SqlDbType.NVarChar);
                 Brand.Value = this.Brand;
                 cmnd.Parameters.Add(Brand);
@@ -125,9 +125,9 @@
                 SqlParameter Color = new SqlParameter("@Color", SqlDbType.NVarChar);
                 Color.Value = this.Color;
                 cmnd.Parameters.Add(Color);
-                SqlParameter Details = new SqlParameter("@Details", SqlDbType.NVarChar);
-                Details.Value ="";
-                cmnd.Parameters.Add(Details);
+                //SqlParameter Details = new SqlParameter("@Details", SqlDbType.NVarChar);
+                //Details.Value ="";
+                //cmnd.Parameters.Add(Details);
                 try
                 {
                     conn.Open();

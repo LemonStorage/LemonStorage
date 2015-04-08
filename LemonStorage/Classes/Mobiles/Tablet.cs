@@ -5,9 +5,9 @@
     using System.Data;
     using System.Data.SqlClient;
 
-    public class Tablet : Mobile,IMobiles, IProduct, ISavable
+    public class Tablet : Mobile, IMobiles, IProduct, ISavable
     {
-        
+
         public Tablet(decimal price, string brand, string model, string color, string processor,
                       double displaySize, double camInMPix, uint ram, uint rom)
             : base(price, brand, model, color, processor, displaySize, camInMPix, ram, rom)
@@ -20,6 +20,7 @@
             SqlConnection conn = LemonStorage.LemonStorageMain.CreateConnection();
             using (conn)
             {
+
                 SqlCommand cmnd = new SqlCommand("dbo.AddProduct", conn);
                 cmnd.CommandType = CommandType.StoredProcedure;
                 cmnd.CommandText = "AddProduct";

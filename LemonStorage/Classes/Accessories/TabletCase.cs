@@ -6,11 +6,14 @@
     public class TabletCase : Accessories, IAccessories, IProduct, ISavable
     {
         private string compatibility;//With which tablet is it compatible
+        private TabletCaseCharacterics characteristics = new TabletCaseCharacterics();
 
-        public TabletCase(int price, string brand, string model, string color, string material, string compatibility)
+        public TabletCase(int price, string brand, string model, string color, string material, string compatibility, TabletCaseCharacterics chatacteristics)
             : base(price, brand, model, color, material)
         {
             this.Compatibility = compatibility;
+            this.characteristics = chatacteristics;
+
         }
 
         public string Compatibility

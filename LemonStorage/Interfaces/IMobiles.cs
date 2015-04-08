@@ -7,7 +7,6 @@
         //MobileBrand Brand { get; set; }
         string Processor { get; set; }
         double DisplaySize { get; set; }
-        double CamInMPix { get; set; }
         uint Ram { get; set; }
         uint Rom { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LemonStorage.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Linq;
 
 namespace LemonStorage.GUI
 {
@@ -103,7 +105,7 @@ namespace LemonStorage.GUI
                 {
                     MessageBox.Show(ol.Message.ToString());
                 }
-                
+
             }
         }
         private void Increase_Click(object sender, EventArgs e)
@@ -147,7 +149,7 @@ namespace LemonStorage.GUI
                         MessageBox.Show(se.ToString());
                     }
                 }
-                else 
+                else
                 {
                 }
                 Increase.Visible = false;
@@ -188,6 +190,11 @@ namespace LemonStorage.GUI
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

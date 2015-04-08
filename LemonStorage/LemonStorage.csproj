@@ -49,6 +49,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +65,7 @@
     <Compile Include="Classes\Accessories\PhoneCase.cs" />
     <Compile Include="Classes\Accessories\LaptopBag.cs" />
     <Compile Include="Classes\Accessories\TabletCase.cs" />
+    <Compile Include="Classes\Accessories\TabletCaseCharacterics.cs" />
     <Compile Include="Classes\Computers\Computer.cs" />
     <Compile Include="Classes\Computers\DesktopPC.cs" />
     <Compile Include="Classes\Computers\Laptop.cs" />
